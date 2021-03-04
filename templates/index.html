@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!-- Colour Scheme
+    #17252A
+    #2B7A78
+    #3AAFA9
+    #DEF2F1
+    #FEFFFF -->
+    <!--- basic page needs -->
+    <!--==================================================-->
+    <meta charset="utf-8">
+    <title>Deep Audiobook Tuner</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas -->
+    <!--==================================================-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Website Preview -->
+    <meta name="title" property="og:title" content="Deep Audiobook Tuner" />
+    <meta property="og:type" content="Website" />
+    <meta name="image" property="og:image" content="#" />
+    <meta name="description" property="og:description" content="#" />
+    <meta name="author" content="Daniel Lobo, Jenny Dcruz, Smita Deulkar, Leander Fernandes" />
+    <!-- Website Preview End -->
+
+    <!-- CSS -->
+    <!--==================================================-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/vendor.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+    <!-- script -->
+    <!--==================================================-->
+    <script src="{{ url_for('static', filename='js/modernizr.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/pace.min.js') }}"></script>
+
+    <!-- icons -->
+    <!--==================================================-->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='icon/icon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ url_for('static', filename='icon/icon.ico') }}" type="image/x-icon">
+
+</head>
+
+<body id="top">
+
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+
+
+    <!-- header  -->
+    <!--==================================================-->
+    <header class="s-header">
+
+        <div class="header-logo">
+            <a class="site-logo" href="index.html">
+                Deep Audiobook Tuner
+            </a>
+        </div>
+
+        <nav class="row header-nav-wrap wide">
+            <ul class="header-main-nav">
+                <li class="current"><a class="smoothscroll" href="#home" title="intro">Home</a></li>
+                <li><a class="smoothscroll" href="#about" title="about">About</a></li>
+                <li><a class="smoothscroll" href="#process" title="features">Process</a></li>
+                <li><a class="smoothscroll" href="#team" title="features">Team</a></li>
+                <li><a href="{{ url_for('upload_file') }}" title="about">System</a></li>
+            </ul>
+        </nav>
+
+        <!-- <a class="header-menu-toggle" href="#"><span>Menu</span></a> -->
+    </header> <!-- end header -->
+
+
+    <!-- home -->
+    <!--==================================================-->
+    <section id="home" class="s-home target-section" style="background-image: url({{ url_for('static', filename='images/pattern.jpg') }});">
+
+        <!-- <div class="home-image-part"></div> -->
+
+        <div class="home-content">
+
+            <div class="row home-content__main wide">
+
+                <h1>
+                Deep Audiobook Tuner
+                </h1>
+
+                <h3>
+                    Background Music generation for audiobooks based on predicted sentiments.
+                </h3>
+
+                <div class="home-content__button"> 
+                    <center>
+                        <a href="#about" class="smoothscroll btn btn--primary btn--large">
+                            Learn More
+                        </a>
+                    </center>
+                </div>
+
+            </div> <!-- end home-content__main -->
+
+            <a href="#about" class="home-scroll smoothscroll">
+                <span class="home-scroll__text">Scroll Down</span>
+                <span class="home-scroll__icon"></span>
+            </a>
+
+        </div> <!-- end home-content -->
+
+    </section> <!-- end s-home -->
+
+
+    <!-- about -->
+    <!--==================================================-->
+    <section id="about" class="s-process target-section">
+
+        <div class="row">
+            <div class="col-full text-center" data-aos="fade-up">
+                <h2 class="display-2" style="color: #FEFFFF;">About</h2>
+                <p class="lead">
+                    Music plays a very important role in people’s lives. The music industry is worth $19 billion 
+                    however the average person doesn’t have a vast knowledge of music theory. This makes it 
+                    difficult for these people to come up with original and catchy melodies. Automating the 
+                    creative process of the human means that companies can get multimedia products faster and 
+                    cheaper. That is why music generators are such an important application of machine learning 
+                    techniques. With the development of deep learning, neural networks are increasingly used in 
+                    various art fields such as music, literature and pictures, and the artwork created can be even 
+                    comparable to humans. Using a deep neural network, we can train a model to generate new 
+                    melodies. Some of the different approaches that can be used to generate music using neural 
+                    networks are LSTMs, bidirectional RNN, etc. Using Principal Component Analysis, we can 
+                    adjust the component sliders to generate different melodies. This system has multiple 
+                    applications. For example, musicians can use this application to generate new songs using the 
+                    unique melodies that our system creates. In audiobooks, using sentiment analysis  we can 
+                    generate emotionally relevant background music. For our project, we will be focusing on 
+                    creating an application that can take the text of a book as the input and generate relevant 
+                    background music based on the predicted sentiment.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- end s-about -->
+
+
+    <!-- process -->
+    <!--==================================================-->
+    <section id="process" class="s-about target-section">
+
+        <div class="row section-header narrower align-center" data-aos="fade-up">
+            <div class="col-full">
+                <h1 class="display-1">
+                    How the System Works?
+                </h1>
+                <p class="lead">
+                    Insert info
+                </p>
+            </div>
+        </div> <!-- end section-header -->
+
+        
+        <div class="row about-desc" data-aos="fade-up">
+            <div class="col-full slick-slider about-desc__slider">
+
+                <div class="about-desc__slide">
+                    <h3 class="item-title">1. Script Segmentation</h3>
+
+                    <p>
+                    Insert info
+                    </p>
+                </div>
+
+                <div class="about-desc__slide">
+                    <h3 class="item-title">2. Extraction of topic from every segment</h3>
+
+                    <p>
+                    Insert info
+                    </p>
+                </div>
+
+                <div class="about-desc__slide">
+                    <h3 class="item-title">3. Sentiment Prediction of each topic</h3>
+
+                    <p>
+                    Insert info
+                    </p>
+                </div>
+
+                <div class="about-desc__slide">
+                    <h3 class="item-title">4. Feed the predicted system to the Music Generation Model</h3>
+
+                    <p>
+                    Insert info
+                    </p>
+                </div>
+                
+                <div class="about-desc__slide">
+                    <h3 class="item-title">5. Generating music sequences based on sentiments</h3>
+
+                    <p>
+                    Insert info
+                    </p>
+                </div>
+                
+                <div class="about-desc__slide">
+                    <h3 class="item-title">6. Combine the audio and music file</h3>
+
+                    <p>
+                    Insert info
+                    </p>
+                </div><!-- end about-desc__slide -->
+
+            </div> <!-- end about-desc__slider -->
+        </div> <!-- end about-desc -->
+    
+        <div class="row about-bottom-image" data-aos="fade-up" style="width: 100%; text-align: center;">
+            <img src="{{ url_for('static', filename='images/HowTheSytemWorks.PNG') }}" alt="App Screenshots"> 
+        </div>  
+             
+    </section> 
+     <!-- end s-process -->
+
+    
+    <!-- team -->
+    <!--==================================================-->
+    <section id="team" class="s-about target-section">
+
+        <div class="row section-header narrower align-center" data-aos="fade-up">
+            <div class="col-full">
+                <h1 class="display-1">
+                    Our Team
+                </h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="teams-wrap">
+
+            <div id="teams" class="row">
+                <div class="col-full">
+                    <!-- START teamlist -->
+                    <ol class="teamlist">
+    
+                        <li class="depth-1 team">
+                            <div class="team__avatar">
+                                <img class="avatar" src="{{ url_for('static', filename='images/avatars/user-01.jpg') }}" alt="" width="50" height="50">
+                            </div>
+    
+                            <div class="team__content">
+    
+                                <div class="team__info">
+                                    <div class="team__author">Daniel Lobo</div>
+    
+                                    <div class="team__meta">
+                                        <div class="team__time">BE CMPN A - 1</div>
+                                        <div class="team__reply">
+                                            <a>06</a>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="team__text">
+                                <p>PID: 172028</p>
+                                </div>
+    
+                            </div>
+                        </li>
+
+                        <br>
+
+                        <li class="depth-1 team">
+                            <div class="team__avatar">
+                                <img class="avatar" src="{{ url_for('static', filename='images/avatars/user-01.jpg') }}" alt="" width="50" height="50">
+                            </div>
+    
+                            <div class="team__content">
+    
+                                <div class="team__info">
+                                    <div class="team__author">Jenny Dcruz</div>
+    
+                                    <div class="team__meta">
+                                        <div class="team__time">BE CMPN A - 1</div>
+                                        <div class="team__reply">
+                                            <a>14</a>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="team__text">
+                                <p>PID: 172047</p>
+                                </div>
+    
+                            </div>
+                        </li>
+
+                        <br>
+
+                        <li class="depth-1 team">
+                            <div class="team__avatar">
+                                <img class="avatar" src="{{ url_for('static', filename='images/avatars/user-01.jpg') }}" alt="" width="50" height="50">
+                            </div>
+    
+                            <div class="team__content">
+    
+                                <div class="team__info">
+                                    <div class="team__author">Smita Deulkar</div>
+    
+                                    <div class="team__meta">
+                                        <div class="team__time">BE CMPN A - 1</div>
+                                        <div class="team__reply">
+                                            <a>17</a>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="team__text">
+                                <p>PID: 172113</p>
+                                </div>
+    
+                            </div>
+                        </li>
+
+                        <br>
+
+                        <li class="depth-1 team">
+                            <div class="team__avatar">
+                                <img class="avatar" src="{{ url_for('static', filename='images/avatars/user-01.jpg') }}" alt="" width="50" height="50">
+                            </div>
+    
+                            <div class="team__content">
+    
+                                <div class="team__info">
+                                    <div class="team__author">Leander Fernandes</div>
+    
+                                    <div class="team__meta">
+                                        <div class="team__time">BE CMPN A - 1</div>
+                                        <div class="team__reply">
+                                            <a>18</a>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="team__text">
+                                <p>PID: 172061</p>
+                                </div>
+    
+                            </div>
+                        </li>
+    
+                    </ol>
+                    <!-- END teamlist -->
+    
+                </div> <!-- end col-full -->
+            </div> <!-- end teams -->
+        </div> <!-- end teams-wrap -->    
+             
+    </section> 
+     <!-- end s-team -->
+
+
+    <!-- footer -->
+    <!--==================================================-->
+    <footer class="s-footer footer">
+
+        <div class="row footer__bottom">
+            <div class="col-five tab-full">
+                <div class="footer__site-links">
+                    <a class="logo" href="#home" style="text-align: center;">
+                        Deep Audiobook Tuner
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-six tab-full end">
+                <ul class="footer__site-links">
+                    <li><a class="smoothscroll" href="#home" title="intro">Home</a></li>
+                    <li><a class="smoothscroll" href="#about" title="about">About</a></li>
+                    <li><a class="smoothscroll" href="#process" title="features">Process</a></li>
+                    <li><a class="smoothscroll" href="#team" title="features">Team</a></li>
+                    <li><a href="{{ url_for('upload_file') }}" title="about">System</a></li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="go-top">
+            <a class="smoothscroll" title="Back to Top" href="#top"></a>
+        </div>
+
+        <p class="footer__contact">
+            Do you have a question? Send us a word: <br>
+            <a href="mailto:danlobo1999@gmail.com " class="footer__mail-link">danlobo1999@gmail.com </a><br>
+            <a href="mailto:jendcruz23@gmail.com" class="footer__mail-link">jendcruz23@gmail.com</a><br>
+            <a href="mailto:smitashobha1999@gmail.com" class="footer__mail-link">smitashobha1999@gmail.com</a><br>
+            <a href="mailto:fernandeslder@gmail.com" class="footer__mail-link">fernandeslder@gmail.com</a>
+        </p>
+
+        <div class="cl-copyright">
+            <span><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </span>
+        </div>
+
+    </footer> <!-- end s-footer -->
+
+
+    <!-- Java Script -->
+    <!--==================================================-->
+    <script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/plugins.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
