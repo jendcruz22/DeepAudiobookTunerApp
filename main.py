@@ -2,9 +2,13 @@ import os
 from werkzeug.utils import secure_filename
 from flask import Flask,flash,request,redirect,send_file,render_template
 
+UPLOAD_FOLDER = 'uploads/'
+DOWNLOAD_FOLDER = 'download/'
+
+#app = Flask(__name__)
 app = Flask(__name__, template_folder='templates')
-app.config['UPLOAD_FOLDER'] = 'uploads/'
-app.config['DOWNLOAD_FOLDER'] = 'download/'
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['DOWNLOAD_FOLDER'] = DOWNLOAD_FOLDER
 
 #Home page
 @app.route('/')
@@ -45,7 +49,7 @@ def download_file(filename):
 
 @app.route('/return-files/<filename>')
 def return_files_tut(filename):
-    file_path = UPLOAD_FOLDER + filename
+    file_path = DOWNLOAD_FOLDER + filename
     return send_file(file_path, as_attachment=True, attachment_filename='')
 
 if __name__ == "__main__":
