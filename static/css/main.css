@@ -566,6 +566,7 @@ input[type="email"],
 input[type="number"],
 input[type="search"],
 input[type="text"],
+input[type="file"],
 input[type="tel"],
 input[type="url"],
 input[type="password"],
@@ -647,6 +648,7 @@ textarea {
 }
 
 input[type="email"]:focus,
+input[type="file"]:focus,
 input[type="number"]:focus,
 input[type="search"]:focus,
 input[type="text"]:focus,
@@ -760,6 +762,7 @@ select:-webkit-autofill:focus {
 .btn,
 button,
 input[type="submit"],
+input[type="file"],
 input[type="reset"],
 input[type="button"] {
   display: inline-block;
@@ -787,11 +790,13 @@ input[type="button"] {
 .btn:hover,
 button:hover,
 input[type="submit"]:hover,
+input[type="file"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover,
 .btn:focus,
 button:focus,
 input[type="submit"]:focus,
+input[type="file"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
   background-color: #b8b8b8;
@@ -805,6 +810,7 @@ input[type="button"]:focus {
 .btn.btn--primary,
 button.btn--primary,
 input[type="submit"].btn--primary,
+input[type="file"].btn--primary,
 input[type="reset"].btn--primary,
 input[type="button"].btn--primary {
   background: #3AAFA9;
@@ -815,11 +821,13 @@ input[type="button"].btn--primary {
 .btn.btn--primary:hover,
 button.btn--primary:hover,
 input[type="submit"].btn--primary:hover,
+input[type="file"].btn--primary:hover,
 input[type="reset"].btn--primary:hover,
 input[type="button"].btn--primary:hover,
 .btn.btn--primary:focus,
 button.btn--primary:focus,
 input[type="submit"].btn--primary:focus,
+input[type="file"].btn--primary:focus,
 input[type="reset"].btn--primary:focus,
 input[type="button"].btn--primary:focus {
   background: #2B7A78;

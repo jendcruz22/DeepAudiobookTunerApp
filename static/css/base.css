@@ -360,6 +360,7 @@ fieldset {
 input[type="email"],
 input[type="number"],
 input[type="search"],
+input[type="file"],
 input[type="text"],
 input[type="tel"],
 input[type="url"],
