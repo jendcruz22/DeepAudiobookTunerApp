@@ -37,10 +37,15 @@ def upload_file():
             file.save(os.path.join(app.config['DOWNLOAD_FOLDER'], filename))
             print("saved file successfully")
 
-      #send file name as parameter to downlad
+      #send file name as parameter to play
             return redirect('/downloadfile/'+ filename)
     return render_template('upload_file.html')
 
+# # Audio Player API
+# @app.route("/player/<filename>", methods = ['GET'])
+# def player(filename):
+#         return redirect('/download.html/'+filename)
+#     return render_template('player.html',value=filename)
 
 # Download API
 @app.route("/downloadfile/<filename>", methods = ['GET'])
