@@ -23,14 +23,14 @@
 
     <!-- CSS -->
     <!--==================================================-->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/vendor.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/vendor.css') }}">
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/main.css') }}">
 
     <!-- script -->
     <!--==================================================-->
-    <script src="{{ url_for('static', filename='js/modernizr.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/pace.min.js') }}"></script>
+    <script type="text/js" src="{{ url_for('static', filename='js/modernizr.js') }}"></script>
+    <script type="text/js" src="{{ url_for('static', filename='js/pace.min.js') }}"></script>
 
     <!-- icons -->
     <!--==================================================-->
@@ -83,9 +83,11 @@
 
 
                 <div class="home-content__button"> 
-                  <a href="/return-files/{{value}}" class="smoothscroll btn btn--primary btn--large">
-                      Download
-                  </a>
+                    <a href="/return-files/{{value}}" class="smoothscroll btn btn--primary btn--large">
+                        Download
+                    </a>
+                </div>
+
                 </div>
                 </center>
             </div> <!-- end home-content__main -->
@@ -98,5 +100,60 @@
         </div> <!-- end home-content -->
 
     </section> <!-- end s-home -->
+
+    <!-- footer -->
+    <!--==================================================-->
+    <footer class="s-footer footer">
+
+        <div class="row footer__bottom">
+            <div class="col-five tab-full">
+                <div class="footer__site-links">
+                    <a class="logo" href="#home" style="text-align: center;">
+                        Deep Audiobook Tuner
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-six tab-full end">
+                <ul class="footer__site-links">
+                    <li><a class="smoothscroll" href="#home" title="intro">Home</a></li>
+                    <li><a class="smoothscroll" href="#about" title="about">About</a></li>
+                    <li><a class="smoothscroll" href="#process" title="features">Process</a></li>
+                    <li><a class="smoothscroll" href="./index.html/#team" title="features">Team</a></li>
+                    <li><a href="{{ url_for('upload_file') }}" title="about">System</a></li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="go-top">
+            <a class="smoothscroll" title="Back to Top" href="#top"></a>
+        </div>
+
+        <p class="footer__contact">
+            Do you have a question? Send us a word: <br>
+            <a href="mailto:danlobo1999@gmail.com " class="footer__mail-link">danlobo1999@gmail.com </a><br>
+            <a href="mailto:jendcruz23@gmail.com" class="footer__mail-link">jendcruz23@gmail.com</a><br>
+            <a href="mailto:smitashobha1999@gmail.com" class="footer__mail-link">smitashobha1999@gmail.com</a><br>
+            <a href="mailto:fernandeslder@gmail.com" class="footer__mail-link">fernandeslder@gmail.com</a>
+        </p>
+
+        <div class="cl-copyright">
+            <span><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </span>
+        </div>
+
+    </footer> <!-- end s-footer -->
+
+
+    <!-- Java Script -->
+    <!--==================================================-->
+    <script type="text/js" src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+    <script type="text/js" src="{{ url_for('static', filename='js/plugins.js') }}"></script>
+    <script type="text/js" src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    
     </body>
     
