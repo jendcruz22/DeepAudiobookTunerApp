@@ -38,18 +38,18 @@ def upload_file():
             print("saved file successfully")
 
       #send file name as parameter to downlad
-            return redirect('/downloadfile/'+ filename)
+            return redirect('/player/'+ filename)
     return render_template('upload_file.html')
 
 # Player API
-# @app.route("/player/<filename>", methods = ['GET'])
-# def player(filename):
-#     return render_template('player.html',value=filename)
+@app.route("/player/<filename>", methods = ['GET'])
+def player(filename):
+    return render_template('player.html', value=filename)
 
 # Download API
 @app.route("/downloadfile/<filename>", methods = ['GET'])
 def download_file(filename):
-    return render_template('download.html',value=filename)
+    return render_template('download.html', value=filename)
 
 @app.route('/return-files/<filename>')
 def return_files_tut(filename):

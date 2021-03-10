@@ -43,17 +43,17 @@
       <header class="s-header">
 
             <div class="header-logo">
-               <a class="site-logo" href="index.html">
+               <a class="site-logo" href="{{ url_for('index') }}">
                   Deep Audiobook Tuner
                </a>
             </div>
 
             <nav class="row header-nav-wrap wide">
                 <ul class="header-main-nav">
-                    <li><a class="smoothscroll" href="#home" title="intro">Home</a></li>
-                    <li><a class="smoothscroll" href="#about" title="about">About</a></li>
-                    <li><a class="smoothscroll" href="#process" title="features">Process</a></li>
-                    <li><a class="smoothscroll" href="#team" title="features">Team</a></li>
+                    <li><a class="smoothscroll" href="{{ url_for('index') }}" title="intro">Home</a></li>
+                    <li><a class="smoothscroll" href="{{ url_for('index') }}" title="about">About</a></li>
+                    <li><a class="smoothscroll" href="{{ url_for('index') }}" title="features">Process</a></li>
+                    <li><a class="smoothscroll" href="{{ url_for('index') }}" title="features">Team</a></li>
                     <li><a href="{{ url_for('upload_file') }}" title="about">System</a></li>
                 </ul>
             </nav>

@@ -44,7 +44,7 @@
     <header class="s-header">
 
         <div class="header-logo">
-            <a class="site-logo" href="index.html">
+            <a class="site-logo" href="{{ url_for('index') }}">
                 Deep Audiobook Tuner
             </a>
         </div>
@@ -82,17 +82,16 @@
                     Upload your mp3 audio file below.
                 </h3>
 
+                <br>
+
                 <audio controls>
                     <source src="../download/{{value}}" type="audio/ogg">
                     <source src="../download/{{value}}" type="audio/mpeg">
                 </audio>
 
-                <a href="#" class="smoothscroll btn btn--primary btn--large">
-                    Satisfied, Proceed
-                </a>
-                <a href="#" class="smoothscroll btn btn--primary btn--large">
-                    Not Satisfied, Retry
-                </a>
+                <br>
+                <br>
+
                 </center>
             </div> <!-- end home-content__main -->
 
