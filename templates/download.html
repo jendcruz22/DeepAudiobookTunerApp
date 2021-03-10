@@ -23,14 +23,14 @@
 
     <!-- CSS -->
     <!--==================================================-->
-    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/base.css') }}">
-    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/vendor.css') }}">
-    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/vendor.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 
     <!-- script -->
     <!--==================================================-->
-    <script type="text/js" src="{{ url_for('static', filename='js/modernizr.js') }}"></script>
-    <script type="text/js" src="{{ url_for('static', filename='js/pace.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/modernizr.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/pace.min.js') }}"></script>
 
     <!-- icons -->
     <!--==================================================-->
@@ -116,10 +116,10 @@
 
             <div class="col-six tab-full end">
                 <ul class="footer__site-links">
-                    <li><a class="smoothscroll" href="#home" title="intro">Home</a></li>
-                    <li><a class="smoothscroll" href="#about" title="about">About</a></li>
-                    <li><a class="smoothscroll" href="#process" title="features">Process</a></li>
-                    <li><a class="smoothscroll" href="./index.html/#team" title="features">Team</a></li>
+                    <li><a class="smoothscroll" href="{{ url_for('index') }}" title="intro">Home</a></li>
+                    <li><a class="smoothscroll" href="{{ url_for('index') }}" title="about">About</a></li>
+                    <li><a class="smoothscroll" href="{{ url_for('index') }}" title="features">Process</a></li>
+                    <li><a class="smoothscroll" href="{{ url_for('index') }}" title="features">Team</a></li>
                     <li><a href="{{ url_for('upload_file') }}" title="about">System</a></li>
                 </ul>
 
@@ -150,9 +150,9 @@
 
     <!-- Java Script -->
     <!--==================================================-->
-    <script type="text/js" src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
-    <script type="text/js" src="{{ url_for('static', filename='js/plugins.js') }}"></script>
-    <script type="text/js" src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/plugins.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
     
     </body>
