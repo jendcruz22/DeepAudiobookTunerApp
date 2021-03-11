@@ -83,7 +83,7 @@
 
 
                 <div class="home-content__button"> 
-                    <a href="/return-files/{{value}}" class="smoothscroll btn btn--primary btn--large">
+                    <a href="/return-files/{{value}}" class="btn btn-info" style="background-color: #3AAFA9; border-color: #3AAFA9; color: white;">
                         Download
                     </a>
                 </div>
@@ -108,7 +108,7 @@
         <div class="row footer__bottom">
             <div class="col-five tab-full">
                 <div class="footer__site-links">
-                    <a class="logo" href="#home" style="text-align: center;">
+                    <a class="logo" href="{{ url_for('index') }}" style="text-align: center;">
                         Deep Audiobook Tuner
                     </a>
                 </div>

@@ -87,14 +87,14 @@
                 <form action="" method=post enctype=multipart/form-data>
                     <p><input type=file name=file style="width: 75%; letter-spacing: 0rem;">
                     <br>
-                    <input type=submit value=Upload>
+                    <input type=submit value=Upload style="background-color: #3AAFA9; border-color: #3AAFA9; color: white;">
                 </form>
   
                 </div>
                 </center>
             </div> <!-- end home-content__main -->
 
-            <a href="#about" class="home-scroll smoothscroll">
+            <a href="{{ url_for('upload_file') }}" class="home-scroll smoothscroll">
                 <span class="home-scroll__text">Scroll Down</span>
                 <span class="home-scroll__icon"></span>
             </a>
@@ -111,7 +111,7 @@
         <div class="row footer__bottom">
             <div class="col-five tab-full">
                 <div class="footer__site-links">
-                    <a class="logo" href="#home" style="text-align: center;">
+                    <a class="logo" href="{{ url_for('index') }}" style="text-align: center;">
                         Deep Audiobook Tuner
                     </a>
                 </div>
@@ -130,7 +130,7 @@
         </div>
 
         <div class="go-top">
-            <a class="smoothscroll" title="Back to Top" href="#top"></a>
+            <a class="smoothscroll" title="Back to Top" href="{{ url_for('upload_file') }}"></a>
         </div>
 
         <p class="footer__contact">

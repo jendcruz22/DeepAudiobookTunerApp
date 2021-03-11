@@ -18,8 +18,29 @@ def index():
 # Upload API
 @app.route('/uploadfile', methods=['GET', 'POST'])
 def upload_file():
-    if request.method == 'POST':
+    # Delete existing files from the upload folder
+    for filename in os.listdir(UPLOAD_FOLDER):
+        file_path = os.path.join(UPLOAD_FOLDER, filename)
+        try:
+            if os.path.isfile(file_path) or os.path.islink(file_path):
+                os.unlink(file_path)
+            elif os.path.isdir(file_path):
+                shutil.rmtree(file_path)
+        except Exception as e:
+            print('Failed to delete %s. Reason: %s' % (file_path, e))
+    
+    # Delete existing files from the download folder
+    for filename in os.listdir(DOWNLOAD_FOLDER):
+        file_path = os.path.join(DOWNLOAD_FOLDER, filename)
+        try:
+            if os.path.isfile(file_path) or os.path.islink(file_path):
+                os.unlink(file_path)
+            elif os.path.isdir(file_path):
+                shutil.rmtree(file_path)
+        except Exception as e:
+            print('Failed to delete %s. Reason: %s' % (file_path, e))
 
+    if request.method == 'POST':
         # check if the post request has the file part
         if 'file' not in request.files:
             print('no file')
