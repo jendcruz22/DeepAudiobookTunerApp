@@ -1338,12 +1338,12 @@ input::-moz-focus-inner {
 }
 
 .pgn__prev {
-  background-image: url("{{ url_for('static', filename='images/icons/icon-arrow-left.svg')}}");
+  background-image: url("../images/icons/icon-arrow-left.svg");
   left: 0;
 }
 
 .pgn__next {
-  background-image: url("{{ url_for('static', filename='images/icons/icon-arrow-right.svg')}}");
+  background-image: url("../images/icons/icon-arrow-right.svg");
   right: 0;
 }
 
@@ -1915,7 +1915,7 @@ input::-moz-focus-inner {
   width: 100%;
   height: 100vh;
   min-height: 786px;
-  background-image: url("{{ url_for('static', filename='images/pattern.jpg')}}");
+  background-image: url("../images/pattern.jpg");
   background-size: cover;
   position: relative;
   overflow: hidden;
@@ -2142,7 +2142,7 @@ input::-moz-focus-inner {
   width: 90px;
   border-radius: 50%;
   background-color: #FFFFFF;
-  background-image: url("{{ url_for('static', filename='images/icons/icon-play-black.svg')}}");
+  background-image: url("../images/icons/icon-play-black.svg");
   background-repeat: no-repeat;
   background-position: 55% center;
   background-size: 24px 27px;
@@ -2156,7 +2156,7 @@ input::-moz-focus-inner {
 
 .btn-video:hover .video-icon {
   background-color: #3AAFA9;
-  background-image: url("{{ url_for('static', filename='images/icons/icon-play.svg')}}");
+  background-image: url("../images/icons/icon-play.svg");
 }
 
 /* ------------------------------------------------------------------- 
@@ -2196,7 +2196,7 @@ input::-moz-focus-inner {
   height: 5.6rem;
   width: 5.6rem;
   background-color: #000000;
-  background-image: url("{{ url_for('static', filename='images/icons/icon-arrow-down.svg')}}");
+  background-image: url("/static/images/icons/icon-arrow-down.svg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 10px 15px;
@@ -3023,7 +3023,7 @@ html.no-csstransitions .home-content__main {
   width: 5.6rem;
   line-height: 5.6rem;
   text-align: center;
-  background-image: url("{{ url_for('static', filename='images/icons/icon-arrow-up.svg')}}");
+  background-image: url("/static/images/icons/icon-arrow-up.svg");
   background-color: #000000;
   background-repeat: no-repeat;
   background-position: center center;

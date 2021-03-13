@@ -3,8 +3,8 @@
  *
  * ------------------------------------------------------------------- */
 @import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,400i,500,600,700|IBM+Plex+Serif:300,300i,400,500,600,700");
-@import url("{{ url_for('static', filename='css/font-awesome/css/fontawesome-all.css')}}");
-@import url("{{ url_for('static', filename='css/micons/micons.css')}}");
+@import url("font-awesome/css/fontawesome-all.css");
+@import url("micons/micons.css");
 
 
 /* ===================================================================
