@@ -3,7 +3,7 @@ from werkzeug.utils import secure_filename
 from flask import Flask,flash,request,redirect,send_file,render_template
 
 UPLOAD_FOLDER = 'uploads/'
-DOWNLOAD_FOLDER = 'download/'
+DOWNLOAD_FOLDER = 'downloads/'
 
 #app = Flask(__name__)
 app = Flask(__name__, template_folder='templates')
@@ -59,13 +59,15 @@ def upload_file():
             print("saved file successfully")
 
       #send file name as parameter to downlad
-            return redirect('/downloadfile/'+ filename)
+            return redirect('/player/'+ filename)
     return render_template('upload_file.html')
 
 # Player API
-# @app.route("/player/<filename>", methods = ['GET'])
-# def player(filename):
-#     return render_template('player.html', value=filename)
+@app.route("/player/<filename>", methods = ['GET'])
+def player(filename):
+    if request.method == 'POST':
+        return redirect('/downloadfile/'+ filename)
+    return render_template('player.html', value=filename)
 
 # Download API
 @app.route("/downloadfile/<filename>", methods = ['GET'])

@@ -88,7 +88,14 @@
                     <source src="../download/{{value}}" type="audio/ogg">
                     <source src="../download/{{value}}" type="audio/mpeg">
                 </audio>
-
+                <div class="home-content__button">
+                    <a href="{{ url_for('upload_file') }}" class="btn btn-info" style="background-color: #3AAFA9; border-color: #3AAFA9; color: white;">
+                        Retry
+                    </a>
+                    <a href="/downloadfile/{{value}}" class="btn btn-info" style="background-color: #3AAFA9; border-color: #3AAFA9; color: white;">
+                        Proceed
+                    </a>
+                </div>
                 <br>
                 <br>
 
