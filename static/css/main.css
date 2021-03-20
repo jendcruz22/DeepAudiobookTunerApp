@@ -2109,57 +2109,6 @@ input::-moz-focus-inner {
 }
 
 /* ------------------------------------------------------------------- 
- * ## video button
- * ------------------------------------------------------------------- */
-.btn-video {
-  display: inline-block;
-  text-align: center;
-  outline: none;
-  position: absolute;
-  bottom: 40%;
-  left: calc(50% + 200px - 45px);
-}
-
-.btn-video::after {
-  display: inline-block;
-  display: none;
-  content: "Watch Video";
-  font-size: 12px;
-  font-weight: 600;
-  color: #FFFFFF;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  line-height: 90px;
-  padding-left: 16px;
-  vertical-align: top;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-.video-icon {
-  display: inline-block;
-  height: 90px;
-  width: 90px;
-  border-radius: 50%;
-  background-color: #FFFFFF;
-  background-image: url("../images/icons/icon-play-black.svg");
-  background-repeat: no-repeat;
-  background-position: 55% center;
-  background-size: 24px 27px;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-.btn-video:hover::after {
-  color: #3AAFA9;
-}
-
-.btn-video:hover .video-icon {
-  background-color: #3AAFA9;
-  background-image: url("../images/icons/icon-play.svg");
-}
-
-/* ------------------------------------------------------------------- 
  * ## home scroll
  * ------------------------------------------------------------------- */
 .home-scroll {
