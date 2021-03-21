@@ -31,39 +31,21 @@
     }
 }
 
-img {
-   display: block;
-   width: 100%;
-   height: auto;
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-}
-
-.container {
-    max-width: 960px;
-    margin: 0 auto;
-}
 .pre-overlay {
     position: fixed;
     width: 100%;
     height: 50%;
-    background-color: #121619;
+    background-color: #222;
     z-index: 50;
     transition: all 1.8s ease;
 }
 .pre-overlay.o-1 {
     left: 0;
     top: 0;
-    background-color: #121619;
 }
 .pre-overlay.o-2 {
     right: 0;
     bottom: 0;
-    background-color: #121619;
 }
 #preloader {
     display: flex;
@@ -72,7 +54,6 @@ img {
     flex-direction: column;
     width: 100%;
     height: 100%;
-    background-color: #121619;
 }
 #preloader p {
     font-size: 20px;
@@ -96,7 +77,7 @@ img {
 }
 #preloader .decor .bar {
     height: 100px;
-    /* background-color: #fff; */
+    background-color: #fff;
     position: absolute;
     width: 100%;
     left: 0;
@@ -118,7 +99,7 @@ img {
     position: absolute;
     left: -45px;
     bottom: 0px;
-    /* background-color: #fff; */
+    background-color: #fff;
 }
 #preloader.animation .decor::before {
     animation-name: music-first;
@@ -132,7 +113,7 @@ img {
     content: "";
     width: 30px;
     height: 70px;
-    /* background-color: #fff; */
+    background-color: #fff;
     left: 45px;
     bottom:  0;
     position: absolute;
