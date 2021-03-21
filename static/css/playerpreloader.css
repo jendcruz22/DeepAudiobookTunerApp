@@ -37,7 +37,7 @@
     height: 50%;
     background-color: #222;
     z-index: 50;
-    transition: all 1.8s ease;
+    transition: all 12.8s ease;
 }
 .pre-overlay.o-1 {
     left: 0;
@@ -64,7 +64,7 @@
 }
 #preloader.animation p {
     animation-name: blink;
-    animation-duration: .85s;
+    animation-duration: 11.85s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in;
     animation-direction: alternate;
@@ -85,7 +85,7 @@
 }
 #preloader.animation .decor .bar {
     animation-name: music-sec;
-    animation-duration: 1s;
+    animation-duration: 11s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in;
     animation-direction: alternate;
@@ -103,7 +103,7 @@
 }
 #preloader.animation .decor::before {
     animation-name: music-first;
-    animation-duration: 0.5s;
+    animation-duration: 10.5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in;
     animation-direction: alternate;
@@ -120,7 +120,7 @@
 }
 #preloader.animation .decor::after {
     animation-name: music-third;
-    animation-duration: .75s;
+    animation-duration: 10.75s;
     animation-iteration-count: infinite;
     animation-timing-function: ease;
     animation-direction: alternate;
