@@ -8,6 +8,7 @@ Audiobooks are being used on a regular basis by hundreds of users. The system in
 
 Now the system will have obtained 2 values (sentiments) predicted by both, the TBSA as well as the ABSA. The values may vary and lead to an error. To avoid this, the weighted average of values will be calculated in order to generate the  final predicted sentiments. Utilizing these predicted sentiments as well as the music generation model that has been explained ahead in this report, our application generates a seamless, distinctive musical score for every segment. These scores are stitched together along with the input audio file to provide the user an audiobook with felicitous background tunes.
 
+![Architecture of the System](./static/images/Architecture.png)
 
 ## **How it works?**
 This application uses Flask, HTML, CSS, and JavaScript. 
