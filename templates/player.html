@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/vendor.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/playerpreloader.css') }}">
 
     <!-- script -->
     <!--==================================================-->
@@ -38,6 +39,16 @@
     <link rel="icon" href="{{ url_for('static', filename='images/icons/icon.ico') }}" type="image/x-icon">
     
 <body id="top">
+
+    <div id="preloader" class="animation">
+		<div class="decor">
+			<div class="bar"></div>
+		</div>
+		<p>Loading...</p>
+	</div>
+
+	<div class="pre-overlay o-1"></div>
+		<div class="pre-overlay o-2"></div>
 
     <!-- header  -->
     <!--==================================================-->
@@ -157,12 +168,15 @@
 
     </footer> <!-- end s-footer -->
 
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
     <!-- Java Script -->
     <!--==================================================-->
     <script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/plugins.js') }}"></script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/playerpreloader.js') }}"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     
     </body>
     
