@@ -1,6 +1,6 @@
 $(document).ready(function(){
     setTimeout(function(){
-     $("#preloader").delay(6500).removeClass("animation").addClass("over");
+     $("#preloader").delay(650).removeClass("animation").addClass("over");
      $(".pre-overlay").css({"height" : "0%"});
-    }, 40000);
+    }, 4000);
    });

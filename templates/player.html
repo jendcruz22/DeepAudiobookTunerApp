@@ -96,8 +96,8 @@
                 <br>
 
                 <audio controls>
-                    <source src="../download/{{value}}" type="audio/ogg">
-                    <source src="../download/{{value}}" type="audio/mpeg">
+                    <source src="{{ url_for('static', filename='audio/alice.mp3') }}" type="audio/ogg">
+                    <source src="{{ url_for('static', filename='audio/alice.mp3') }}" type="audio/mpeg">
                 </audio>
                 <div class="home-content__button">
                     <a href="{{ url_for('upload_file') }}" class="btn btn-info" style="background-color: #3AAFA9; border-color: #3AAFA9; color: white;">

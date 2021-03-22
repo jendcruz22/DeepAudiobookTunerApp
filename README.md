@@ -9,7 +9,7 @@ Audiobooks are being used on a regular basis by hundreds of users. The system in
 Now the system will have obtained 2 values (sentiments) predicted by both, the TBSA as well as the ABSA. The values may vary and lead to an error. To avoid this, the weighted average of values will be calculated in order to generate the  final predicted sentiments. Utilizing these predicted sentiments as well as the music generation model that has been explained ahead in this report, our application generates a seamless, distinctive musical score for every segment. These scores are stitched together along with the input audio file to provide the user an audiobook with felicitous background tunes.
 
 <p align="center">
-    <img src = "./static/images/Architecture.png">
+    <img src = "./static/images/HowTheSytemWorks.png">
 </p>
 
 ## **How it works?**
@@ -21,11 +21,6 @@ This flask application uses various templates that are created using HTML and ar
 
 The [CSS](https://github.com/jendcruz22/BE-Project/tree/master/static/css) and [JavaScript](https://github.com/jendcruz22/BE-Project/tree/master/static/js) files used by the HTML templates are stored in the [static](https://github.com/jendcruz22/BE-Project/tree/master/static) folder. This folder also consists of the images [icons](https://github.com/jendcruz22/BE-Project/tree/master/static/images/icons) and [fonts](https://github.com/jendcruz22/BE-Project/tree/master/static/css/font-awesome) that the application uses.
 
-The [env](https://github.com/jendcruz22/BE-Project/tree/master/env) folder consists of the application's environment and can be activated using the following line of code before running the application.
-
-```
-env\Scripts\activate
-```
 The main page ie the [index.html](https://github.com/jendcruz22/BE-Project/blob/master/templates/index.html) file consists of the basic details of this application: How it works, about the system, about the team, etc.
 
 This application accepts mp3 audio files as input ([upload_file.html](https://github.com/jendcruz22/BE-Project/blob/master/templates/upload_file.html)) and saves a copy of it in the uploads folder. This audio file is then processed and made available for the user to listen to ([player.html](https://github.com/jendcruz22/BE-Project/blob/master/templates/player.html)). 
