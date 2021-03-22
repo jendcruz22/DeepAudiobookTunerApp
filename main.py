@@ -5,12 +5,13 @@ import shutil
 
 UPLOAD_FOLDER = 'uploads/'
 DOWNLOAD_FOLDER = 'downloads/'
-# AUDIO_FOLDER = 'static/audio/'
+AUDIO_FOLDER = './static/audio/'
 
 #app = Flask(__name__)
 app = Flask(__name__, template_folder='templates')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['DOWNLOAD_FOLDER'] = DOWNLOAD_FOLDER
+app.config['AUDIO_FOLDER'] = AUDIO_FOLDER
 
 #Home page
 @app.route('/')
@@ -60,7 +61,7 @@ def upload_file():
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             shutil.copy(os.path.join(app.config['UPLOAD_FOLDER'], filename), os.path.join(app.config['DOWNLOAD_FOLDER'], filename))
-            # shutil.copy(os.path.join(app.config['UPLOAD_FOLDER'], filename), os.path.join(app.config['AUDIO_FOLDER'], filename))
+            shutil.copy(os.path.join(app.config['DOWNLOAD_FOLDER'], filename), os.path.join(app.config['AUDIO_FOLDER'], filename))
             print("saved file successfully")
 
       #send file name as parameter to downlad
