@@ -22,29 +22,24 @@ def index():
 @app.route('/uploadfile', methods=['GET', 'POST'])
 def upload_file():
     # Delete existing files from the upload folder
-    for filename in os.listdir(UPLOAD_FOLDER):
-        file_path = os.path.join(UPLOAD_FOLDER, filename)
+    for filename in os.listdir(UPLOAD_FOLDER) or filename in os.listdir(DOWNLOAD_FOLDER) or filename in os.listdir(AUDIO_FOLDER):
+        file_path1 = os.path.join(UPLOAD_FOLDER, filename)
+        file_path2 = os.path.join(DOWNLOAD_FOLDER, filename)
+        file_path3 = os.path.join(AUDIO_FOLDER, filename)
         try:
             if filename!=".gitkeep":
-                if os.path.isfile(file_path) or os.path.islink(file_path):
-                    os.unlink(file_path)
-                elif os.path.isdir(file_path):
-                    shutil.rmtree(file_path)
-        except Exception as e:
-            print('Failed to delete %s. Reason: %s' % (file_path, e))
-    
-    # Delete existing files from the download folder
-    for filename in os.listdir(DOWNLOAD_FOLDER):
-        file_path = os.path.join(DOWNLOAD_FOLDER, filename)
-        try:
-            if filename!=".gitkeep":
-                if os.path.isfile(file_path) or os.path.islink(file_path):
-                    os.unlink(file_path)
-                elif os.path.isdir(file_path):
-                    shutil.rmtree(file_path)
-        except Exception as e:
-            print('Failed to delete %s. Reason: %s' % (file_path, e))
+                if os.path.isfile(file_path1) or os.path.islink(file_path1) or os.path.isfile(file_path2) or os.path.islink(file_path2) or os.path.isfile(file_path3) or os.path.islink(file_path3):
+                    os.unlink(file_path1)
+                    os.unlink(file_path2)
+                    os.unlink(file_path3)
+                elif os.path.isdir(file_path1) or os.path.isdir(file_path2) or os.path.isdir(file_path3):
+                    shutil.rmtree(file_path1)
+                    shutil.rmtree(file_path2)
+                    shutil.rmtree(file_path3)
 
+        except Exception as e:
+            print('Failed to delete %s. Reason: %s' % (file_path1, e))
+    
     if request.method == 'POST':
         # check if the post request has the file part
         if 'file' not in request.files:
@@ -61,7 +56,7 @@ def upload_file():
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             shutil.copy(os.path.join(app.config['UPLOAD_FOLDER'], filename), os.path.join(app.config['DOWNLOAD_FOLDER'], filename))
-            shutil.copy(os.path.join(app.config['DOWNLOAD_FOLDER'], filename), os.path.join(app.config['AUDIO_FOLDER'], filename))
+            shutil.copy(os.path.join(app.config['UPLOAD_FOLDER'], filename), os.path.join(app.config['AUDIO_FOLDER'], filename))
             print("saved file successfully")
 
       #send file name as parameter to downlad
