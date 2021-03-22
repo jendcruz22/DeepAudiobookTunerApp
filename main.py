@@ -7,13 +7,12 @@ UPLOAD_FOLDER = 'uploads/'
 DOWNLOAD_FOLDER = 'downloads/'
 AUDIO_FOLDER = './static/audio/'
 
-#app = Flask(__name__)
 app = Flask(__name__, template_folder='templates')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['DOWNLOAD_FOLDER'] = DOWNLOAD_FOLDER
 app.config['AUDIO_FOLDER'] = AUDIO_FOLDER
 
-#Home page
+# Home page
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -21,7 +20,8 @@ def index():
 # Upload API
 @app.route('/uploadfile', methods=['GET', 'POST'])
 def upload_file():
-    # Delete existing files from the upload folder
+
+    # Delete existing files from the upload, download, and audio folders before processing the next/new input audio
     for filename in os.listdir(UPLOAD_FOLDER) or filename in os.listdir(DOWNLOAD_FOLDER) or filename in os.listdir(AUDIO_FOLDER):
         file_path1 = os.path.join(UPLOAD_FOLDER, filename)
         file_path2 = os.path.join(DOWNLOAD_FOLDER, filename)
@@ -41,25 +41,31 @@ def upload_file():
             print('Failed to delete %s. Reason: %s' % (file_path1, e))
     
     if request.method == 'POST':
+
         # check if the post request has the file part
         if 'file' not in request.files:
             print('no file')
             return redirect(request.url)
         file = request.files['file']
 
-        # if user does not select file, browser also
-        # submit a empty part without filename
+        # if user does not select file, browser also submit a empty part without filename
         if file.filename == '':
             print('no filename')
             return redirect(request.url)
+
         else:
             filename = secure_filename(file.filename)
+            # save the input audio in the uploads folder
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+
+            # file.save only works once like a queue and is also called file buffer.
+            # Since the audio has been parsed now, if we use the above line of code to save the above audio file, it will get saved empty. 
+            # Therefore we use the audio saved once in the uploads folder and make copies of it as shown below
             shutil.copy(os.path.join(app.config['UPLOAD_FOLDER'], filename), os.path.join(app.config['DOWNLOAD_FOLDER'], filename))
             shutil.copy(os.path.join(app.config['UPLOAD_FOLDER'], filename), os.path.join(app.config['AUDIO_FOLDER'], filename))
             print("saved file successfully")
 
-      #send file name as parameter to downlad
+            # send file name as parameter to download
             return redirect('/player/'+ filename)
     return render_template('upload_file.html')
 
