@@ -72,8 +72,9 @@ def upload_file():
 # Player API
 @app.route("/player/<filename>", methods = ['GET'])
 def player(filename):
+    file_path = AUDIO_FOLDER + filename
     if request.method == 'POST':
-        return redirect('/downloadfile/'+ filename)
+        return send_file(file_path, as_attachment=True, attachment_filename='')
     return render_template('player.html', value=filename)
 
 # Download API
