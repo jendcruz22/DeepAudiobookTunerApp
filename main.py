@@ -77,6 +77,11 @@ def player(filename):
         return send_file(file_path, as_attachment=True, attachment_filename='')
     return render_template('player.html', value=filename)
 
+@app.route('/play_audio/<filename>')
+def play_audio(filename):
+    file_path = AUDIO_FOLDER + filename
+    return send_file(file_path, as_attachment=True, attachment_filename='')
+
 # Download API
 @app.route("/downloadfile/<filename>", methods = ['GET'])
 def download_file(filename):
