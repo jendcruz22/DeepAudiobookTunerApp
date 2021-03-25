@@ -88,6 +88,12 @@ def play_audio(filename):
     file_path = EMOTIONS_FOLDER + filename
     return send_file(file_path, as_attachment=True, attachment_filename='')
 
+
+# Final Audio API
+# @app.route("/final_product/<filename>", methods = ['GET'])
+# def final_product(filename):
+#     return render_template('final_product.html', value=filename)
+
 # Download API
 @app.route("/downloadfile/<filename>", methods = ['GET'])
 def download_file(filename):

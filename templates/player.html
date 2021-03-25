@@ -41,7 +41,7 @@
 
 <body id="top">
 
-    <div id="preloader" class="animation">
+    <!-- <div id="preloader" class="animation">
 		<div class="decor">
 			<div class="bar"></div>
 		</div>
@@ -49,7 +49,7 @@
 	</div>
 
 	<div class="pre-overlay o-1"></div>
-		<div class="pre-overlay o-2"></div>
+		<div class="pre-overlay o-2"></div> -->
 
     <!-- header  -->
     <!--==================================================-->
@@ -79,43 +79,116 @@
       <section id="home" class="s-home target-section">
 
         <div class="home-content">
-
+        <center>
             <div class="row home-content__main wide">
-                <center>
+
                 <h1>
-                Deep Audiobook Tuner
+                    <u>D</u>eep <u>A</u>udiobook <u>T</u>uner
                 </h1>
 
                 <h3>
-                    Background Music generation for audiobooks based on predicted sentiments. 
-                    <br>
-                    Upload your mp3 audio file below.
+                    Listed below are the musical scores created for every emotion used by our system to overlay with the audiobook. 
                 </h3>
 
-                <br>
-
-                <audio controls>
-                    <source src="/play_audio/{{value}}" type="audio/ogg">
-                    <source src="/play_audio/{{value}}" type="audio/mpeg">
-                </audio>
-
-                <div class="home-content__button">
-                    <a href="{{ url_for('upload_file') }}" class="btn btn-info" style="background-color: #3AAFA9; border-color: #3AAFA9; color: white;">
-                        Retry
-                    </a>
-                    <a href="/downloadfile/{{value}}" class="btn btn-info" style="background-color: #3AAFA9; border-color: #3AAFA9; color: white;">
-                        Proceed
+                <div class="home-content__button"> 
+                    <a href="#process" class="smoothscroll btn btn--primary btn--large">
+                        Check it out
                     </a>
                 </div>
-                <br>
-                <br>
 
-                </center>
             </div> <!-- end home-content__main -->
+        </center>
+        <a href="#process" class="home-scroll smoothscroll">
+            <span class="home-scroll__text">Scroll Down</span>
+            <span class="home-scroll__icon"></span>
+        </a>
 
         </div> <!-- end home-content -->
 
     </section>
+
+    <!-- process -->
+    <!--==================================================-->
+    <section id="process" class="s-about target-section">
+
+        <div class="row section-header narrower align-center" data-aos="fade-up">
+            <div class="col-full">
+                <h1 class="display-1">
+                    Check out what DAT created
+                </h1>
+                <p class="lead">
+                    If you're happy with the musical scores generated, click the proceed button at the end. 
+                    Else click the retry button to regenerate a musical score for that particular emotion
+                </p>
+            </div>
+        
+            <center>
+                <div>
+                    <h2>
+                        Happy   
+                        <a href="{{ url_for('upload_file') }}" onMouseOver="this.style.color='#3AAFA9'" onMouseOut="this.style.color='#00000'">
+                            <i style="font-size:24px" class="fa" style="line-height: 50px;">&#xf021;</i>
+                        </a>
+                    </h2>
+                    <audio controls>
+                        <source src="/play_audio/{{value}}" type="audio/ogg">
+                        <source src="/play_audio/{{value}}" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div>
+                    <h2>
+                        Sad   
+                        <a href="{{ url_for('upload_file') }}" onMouseOver="this.style.color='#3AAFA9'" onMouseOut="this.style.color='#00000'">
+                            <i style="font-size:24px" class="fa" style="line-height: 50px;">&#xf021;</i>
+                        </a>
+                    </h2>
+                    <audio controls>
+                        <source src="/play_audio/{{value}}" type="audio/ogg">
+                        <source src="/play_audio/{{value}}" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div>
+                    <h2>
+                        Angry   
+                        <a href="{{ url_for('upload_file') }}" onMouseOver="this.style.color='#3AAFA9'" onMouseOut="this.style.color='#00000'">
+                            <i style="font-size:24px" class="fa" style="line-height: 50px;">&#xf021;</i>
+                        </a>
+                    </h2>
+                    <audio controls>
+                        <source src="/play_audio/{{value}}" type="audio/ogg">
+                        <source src="/play_audio/{{value}}" type="audio/mpeg">
+                    </audio>
+                </div>
+
+                <div>
+                    <h2>
+                        Surprise   
+                        <a href="{{ url_for('upload_file') }}" onMouseOver="this.style.color='#3AAFA9'" onMouseOut="this.style.color='#00000'">
+                            <i style="font-size:24px" class="fa" style="line-height: 50px;">&#xf021;</i>
+                        </a>
+                    </h2>
+
+                    <audio controls>
+                        <source src="/play_audio/{{value}}" type="audio/ogg">
+                        <source src="/play_audio/{{value}}" type="audio/mpeg">
+                    </audio>
+                    
+                    <div class="home-content__button" style="padding-top: 0px;">
+                        <a href="/downloadfile/{{value}}" class="btn btn-info" style="background-color: #3AAFA9; border-color: #3AAFA9; color: white;">
+                            Proceed
+                        </a>
+                    </div>
+
+                </div>
+
+                <br>
+                <br>
+            </center>
+        
+        </div> <!-- end process-content__main -->
+
+    </section> 
+     <!-- end s-process -->
     
     <!-- footer -->
     <!--==================================================-->
@@ -140,6 +213,10 @@
                 </ul>
 
             </div>
+        </div>
+
+        <div class="go-top">
+            <a class="smoothscroll" title="Back to Top" href="#top"></a>
         </div>
 
         <p class="footer__contact">
