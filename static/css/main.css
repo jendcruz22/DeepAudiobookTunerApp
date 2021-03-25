@@ -1692,7 +1692,7 @@ input::-moz-focus-inner {
  * ------------------------------------------------------------------- */
 .header-menu-toggle {
   display: none;
-  height: 42px;
+  height: 50px;
   width: 42px;
   line-height: 42px;
   font-family: "IBM Plex Sans", sans-serif;
@@ -1715,7 +1715,7 @@ input::-moz-focus-inner {
 .header-menu-toggle span {
   display: block;
   width: 24px;
-  height: 2px;
+  height: 3px;
   margin-top: -1px;
   position: absolute;
   left: 9px;

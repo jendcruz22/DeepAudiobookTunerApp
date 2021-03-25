@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs -->
+    <!--==================================================-->
+    <meta charset="utf-8">
+    <title>Deep Audiobook Tuner</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas -->
+    <!--==================================================-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Website Preview -->
+    <meta name="title" property="og:title" content="Deep Audiobook Tuner" />
+    <meta property="og:type" content="Website" />
+    <meta name="image" property="og:image" content="#" />
+    <meta name="description" property="og:description" content="#" />
+    <meta name="author" content="Daniel Lobo, Jenny Dcruz, Smita Deulkar, Leander Fernandes" />
+    <!-- Website Preview End -->
+
+    <!-- CSS -->
+    <!--==================================================-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/playerpreloader.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/vendor.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+    <!-- script -->
+    <!--==================================================-->
+    <script src="{{ url_for('static', filename='js/modernizr.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/pace.min.js') }}"></script>
+
+    <!-- icons -->
+    <!--==================================================-->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/icons/icon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ url_for('static', filename='images/icons/icon.ico') }}" type="image/x-icon">
+</head>
+
+<body id="top">
+
+    <div id="preloader" class="animation">
+		<div class="decor">
+			<div class="bar"></div>
+		</div>
+		<p>Loading...</p>
+	</div>
+
+	<div class="pre-overlay o-1"></div>
+		<div class="pre-overlay o-2"></div>
+
+    <!-- header  -->
+    <!--==================================================-->
+    <header class="s-header">
+
+        <div class="header-logo">
+            <a class="site-logo" href="{{ url_for('index') }}">
+                Deep Audiobook Tuner
+            </a>
+        </div>
+
+        <nav class="row header-nav-wrap wide">
+            <ul class="header-main-nav">
+                <li><a href="{{ url_for('index') }}" title="intro">Home</a></li>
+                <li><a href="{{ url_for('index') }}" title="about">About</a></li>
+                <li><a href="{{ url_for('index') }}" title="process">Process</a></li>
+                <li><a href="{{ url_for('index') }}" title="team">Team</a></li>
+                <li class="current"><a href="{{ url_for('upload_file') }}" title="system">System</a></li>
+            </ul>
+        </nav>
+
+        <a class="header-menu-toggle" href="#"><span>Menu</span></a>
+    </header> <!-- end header -->
+    
+    <!-- home -->
+    <!--==================================================-->
+      <section id="home" class="s-home target-section">
+
+        <div class="home-content">
+
+            <div class="row home-content__main wide">
+                <center>
+                <h1>
+                Deep Audiobook Tuner
+                </h1>
+
+                <h3>
+                    Background Music generation for audiobooks based on predicted sentiments. 
+                    <br>
+                    Upload your mp3 audio file below.
+                </h3>
+
+                <br>
+
+                <audio controls>
+                    <source src="/play_audio/{{value}}" type="audio/ogg">
+                    <source src="/play_audio/{{value}}" type="audio/mpeg">
+                </audio>
+
+                <div class="home-content__button">
+                    <a href="{{ url_for('upload_file') }}" class="btn btn-info" style="background-color: #3AAFA9; border-color: #3AAFA9; color: white;">
+                        Retry
+                    </a>
+                    <a href="/downloadfile/{{value}}" class="btn btn-info" style="background-color: #3AAFA9; border-color: #3AAFA9; color: white;">
+                        Proceed
+                    </a>
+                </div>
+                <br>
+                <br>
+
+                </center>
+            </div> <!-- end home-content__main -->
+
+        </div> <!-- end home-content -->
+
+    </section>
+    
+    <!-- footer -->
+    <!--==================================================-->
+    <footer class="s-footer footer">
+
+        <div class="row footer__bottom">
+            <div class="col-five tab-full">
+                <div class="footer__site-links">
+                    <a class="logo" href="{{ url_for('index') }}" style="text-align: center;">
+                        Deep Audiobook Tuner
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-six tab-full end">
+                <ul class="footer__site-links">
+                    <li><a href="{{ url_for('index') }}" title="intro">Home</a></li>
+                    <li><a href="{{ url_for('index') }}" title="about">About</a></li>
+                    <li><a href="{{ url_for('index') }}" title="process">Process</a></li>
+                    <li><a href="{{ url_for('index') }}" title="team">Team</a></li>
+                    <li><a href="{{ url_for('upload_file') }}" title="system">System</a></li>
+                </ul>
+
+            </div>
+        </div>
+
+        <p class="footer__contact">
+            Do you have a question? Send us a word: <br>
+            <a href="mailto:danlobo1999@gmail.com " class="footer__mail-link">danlobo1999@gmail.com </a><br>
+            <a href="mailto:jendcruz23@gmail.com" class="footer__mail-link">jendcruz23@gmail.com</a><br>
+            <a href="mailto:smitashobha1999@gmail.com" class="footer__mail-link">smitashobha1999@gmail.com</a><br>
+            <a href="mailto:fernandeslder@gmail.com" class="footer__mail-link">fernandeslder@gmail.com</a>
+        </p>
+
+        <div class="cl-copyright">
+            <span><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </span>
+        </div>
+
+    </footer> <!-- end s-footer -->
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <!-- Java Script -->
+    <!--==================================================-->
+    <script src="{{ url_for('static', filename='js/playerpreloader.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/plugins.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    
+    </body>
+    
