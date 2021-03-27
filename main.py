@@ -76,11 +76,12 @@ def upload_file():
     return render_template('upload_file.html')
 
 # Player API
-@app.route("/player/<filename>", methods = ['GET'])
+@app.route("/player/<filename>", methods = ['GET', 'POST'])
 def player(filename):
     file_path = EMOTIONS_FOLDER + filename
     if request.method == 'POST':
-        return send_file(file_path, as_attachment=True, attachment_filename='')
+        # return send_file(file_path, as_attachment=True, attachment_filename='')
+        return redirect('/final_product/'+ filename)
     return render_template('player.html', value=filename)
 
 @app.route('/play_audio/<filename>')
@@ -88,18 +89,17 @@ def play_audio(filename):
     file_path = EMOTIONS_FOLDER + filename
     return send_file(file_path, as_attachment=True, attachment_filename='')
 
-
 # Final Audio API
-# @app.route("/final_product/<filename>", methods = ['GET'])
-# def final_product(filename):
-#     return render_template('final_product.html', value=filename)
+@app.route("/final_product/<filename>", methods = ['GET', 'POST'])
+def final_product(filename):
+    return render_template('final_product.html', value=filename)
 
 # Download API
-@app.route("/downloadfile/<filename>", methods = ['GET'])
+@app.route("/downloadfile/<filename>", methods = ['GET', 'POST'])
 def download_file(filename):
     return render_template('download.html', value=filename)
 
-@app.route('/return-files/<filename>')
+@app.route('/return-files/<filename>', methods = ['GET', 'POST'])
 def return_files_tut(filename):
     file_path = DOWNLOAD_FOLDER + filename
     return send_file(file_path, as_attachment=True, attachment_filename='')
