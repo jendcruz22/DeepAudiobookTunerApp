@@ -24,27 +24,64 @@ def index():
 def upload_file():
 
     # Delete existing files from the upload, download, and audio folders before processing the next/new input audio
-    for filename in os.listdir(UPLOAD_FOLDER) or filename in os.listdir(DOWNLOAD_FOLDER) or filename in os.listdir(EMOTIONS_FOLDER) or filename in os.listdir(FINAL_AUDIO_FOLDER):
-        file_path1 = os.path.join(UPLOAD_FOLDER, filename)
-        file_path2 = os.path.join(DOWNLOAD_FOLDER, filename)
-        file_path3 = os.path.join(EMOTIONS_FOLDER, filename)
-        file_path4 = os.path.join(FINAL_AUDIO_FOLDER, filename)
-        try:
-            if filename!=".gitkeep":
-                if os.path.isfile(file_path1) or os.path.islink(file_path1) or os.path.isfile(file_path2) or os.path.islink(file_path2) or os.path.isfile(file_path3) or os.path.islink(file_path3) or os.path.isfile(file_path4) or os.path.islink(file_path4):
-                    os.unlink(file_path1)
-                    os.unlink(file_path2)
-                    os.unlink(file_path3)
-                    os.unlink(file_path4)
+    if len(os.listdir('./uploads/') ) != 0:
+        for filename in os.listdir(UPLOAD_FOLDER):
+            file_path1 = os.path.join(UPLOAD_FOLDER, filename)
+            try:
+                if filename!=".gitignore":
+                    if os.path.isfile(file_path1) or os.path.islink(file_path1):
+                        os.unlink(file_path1)
 
-                elif os.path.isdir(file_path1) or os.path.isdir(file_path2) or os.path.isdir(file_path3) or os.path.isdir(file_path4):
-                    shutil.rmtree(file_path1)
-                    shutil.rmtree(file_path2)
-                    shutil.rmtree(file_path3)
-                    shutil.rmtree(file_path4)
+                    elif os.path.isdir(file_path1):
+                        shutil.rmtree(file_path1)
 
-        except Exception as e:
-            print('Failed to delete. Reason: %s' % (e))
+            except Exception as e:
+                print('Failed to delete. Reason: %s' % (e))
+
+    # Delete existing files from the upload, download, and audio folders before processing the next/new input audio
+    if len(os.listdir('./downloads/') ) != 0:
+        for filename in os.listdir(DOWNLOAD_FOLDER):
+            file_path2 = os.path.join(DOWNLOAD_FOLDER, filename)
+            try:
+                if filename!=".gitignore":
+                    if os.path.isfile(file_path2) or os.path.islink(file_path2):
+                        os.unlink(file_path2)
+
+                    elif os.path.isdir(file_path2):
+                        shutil.rmtree(file_path2)
+
+            except Exception as e:
+                print('Failed to delete. Reason: %s' % (e))
+    
+    # Delete existing files from the upload, download, and audio folders before processing the next/new input audio
+    if len(os.listdir('./static/emotions/') ) != 0:
+        for filename in os.listdir(EMOTIONS_FOLDER):
+            file_path3 = os.path.join(EMOTIONS_FOLDER, filename)
+            try:
+                if filename!=".gitignore":
+                    if os.path.isfile(file_path3) or os.path.islink(file_path3):
+                        os.unlink(file_path3)
+
+                    elif os.path.isdir(file_path3):
+                        shutil.rmtree(file_path3)
+
+            except Exception as e:
+                print('Failed to delete. Reason: %s' % (e))
+    
+    # Delete existing files from the upload, download, and audio folders before processing the next/new input audio
+    if len(os.listdir('./static/final_audio/') ) != 0:
+        for filename in os.listdir(FINAL_AUDIO_FOLDER):
+            file_path4 = os.path.join(FINAL_AUDIO_FOLDER, filename)
+            try:
+                if filename!=".gitignore":
+                    if os.path.isfile(file_path4) or os.path.islink(file_path4):
+                        os.unlink(file_path4)
+
+                    elif os.path.isdir(file_path4):
+                        shutil.rmtree(file_path4)
+
+            except Exception as e:
+                print('Failed to delete. Reason: %s' % (e))
     
     if request.method == 'POST':
 
@@ -69,6 +106,7 @@ def upload_file():
             # Therefore we use the audio saved once in the uploads folder and make copies of it as shown below
             shutil.copy(os.path.join(app.config['UPLOAD_FOLDER'], filename), os.path.join(app.config['DOWNLOAD_FOLDER'], filename))
             shutil.copy(os.path.join(app.config['UPLOAD_FOLDER'], filename), os.path.join(app.config['EMOTIONS_FOLDER'], filename))
+            shutil.copy(os.path.join(app.config['UPLOAD_FOLDER'], filename), os.path.join(app.config['FINAL_AUDIO_FOLDER'], filename))
             print("saved file successfully")
 
             # send file name as parameter to download
