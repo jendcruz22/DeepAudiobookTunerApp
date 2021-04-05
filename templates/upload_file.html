@@ -1,157 +1,132 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
+
 <head>
 
-    <!--- basic page needs -->
-    <!--==================================================-->
-    <meta charset="utf-8">
-    <title>Deep Audiobook Tuner</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <!-- Colour Scheme
+    #17252A
+    #2B7A78
+    #3AAFA9
+    #DEF2F1
+    #FEFFFF -->
 
-    <!-- mobile specific metas -->
-    <!--==================================================-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <!-- Website Preview -->
-    <meta name="title" property="og:title" content="Deep Audiobook Tuner" />
-    <meta property="og:type" content="Website" />
-    <meta name="image" property="og:image" content="#" />
-    <meta name="description" property="og:description" content="#" />
-    <meta name="author" content="Daniel Lobo, Jenny Dcruz, Smita Deulkar, Leander Fernandes" />
-    <!-- Website Preview End -->
+  <title>Deep Audiobook Tuner</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
 
-    <!-- CSS -->
-    <!--==================================================-->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/vendor.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  <!-- icons/icon.pngs -->
+  <link href="{{ url_for('static', filename='img/icons/icon.png') }}" rel="icon">
 
-    <!-- script -->
-    <!--==================================================-->
-    <script src="{{ url_for('static', filename='js/modernizr.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/pace.min.js') }}"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
 
-    <!-- icons -->
-    <!--==================================================-->
-    <link rel="shortcut icon" href="{{ url_for('static', filename='images/icons/icon.png') }}" type="image/x-icon">
-    <link rel="icon" href="{{ url_for('static', filename='images/icons/icon.png') }}" type="image/x-icon">
-    
-<body id="top">
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename='vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
-    <!-- header  -->
-    <!--==================================================-->
-    <header class="s-header">
+  <!-- Template Main CSS File -->
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
 
-        <div class="header-logo">
-            <a class="site-logo" href="{{ url_for('index') }}">
-                Deep Audiobook Tuner
-            </a>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-right header-transparent">
+    <div class="container d-flex justify-content-between align-items-right">
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link" href="{{ url_for('index', _anchor='home') }}">Home</a></li>
+          <li><a class="nav-link scrollto" href="(url_for('index',_anchor='about'))">About</a></li>
+          <li><a class="nav-link scrollto" href="(url_for('index',_anchor='process'))">Process</a></li>
+          <li><a class="nav-link scrollto active" href="#">System</a></li>
+          <li><a class="nav-link scrollto" href="(url_for('index',_anchor='team'))">Team</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= home section ======= -->
+  <section id="home">
+    <div class="home-container" data-aos="fade-up" data-aos-delay="100">
+      <h1>
+        <u>D</u>eep <u>A</u>udiobook <u>T</u>uner
+      </h1>
+
+      <h3>
+        Background Music generation for audiobooks based on predicted sentiments.
+      </h3>
+      <a href="#about" class="btn-get-started">Learn More</a>
+    </div>
+  </section>
+  <!-- End home section -->
+
+  <main id="main">
+
+    <!-- ======= About section ======= -->
+    <section id="about">
+      <center>
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h3 class="section-title">System</h3>
+          <p class="section-description">Upload your mp3 audio file below.</p>
         </div>
 
-        <nav class="row header-nav-wrap wide">
-            <ul class="header-main-nav">
-                <li><a href="{{ url_for('index') }}" title="intro">Home</a></li>
-                <li><a href="{{ url_for('index') }}" title="about">About</a></li>
-                <li><a href="{{ url_for('index') }}" title="process">Process</a></li>
-                <li><a href="{{ url_for('index') }}" title="team">Team</a></li>
-                <li class="current"><a href="{{ url_for('upload_file') }}" title="system">System</a></li>
-            </ul>
-        </nav>
-
-        <a class="header-menu-toggle" href="#"><span>Menu</span></a>
-    </header> <!-- end header -->
-    
-    <!-- home -->
-    <!--==================================================-->
-    <section id="home" class="s-home target-section">
-
-        <!-- <div class="home-image-part"></div> -->
-
-        <div class="home-content">
-
-            <div class="row home-content__main wide">
-                <center>
-                <h1>
-                    <u>D</u>eep <u>A</u>udiobook <u>T</u>uner
-                </h1>
-
-                <h3>
-                    Background Music generation for audiobooks based on predicted sentiments. 
-                    <br>
-                    Upload your mp3 audio file below.
-                </h3>
-
-
-                <div class="home-content__button"> 
-                
-                <form action="" method=post enctype=multipart/form-data>
-                    <p><input type=file name=file style="width: 75%; letter-spacing: 0rem; padding: 10px; padding-bottom: 10px; margin: 10px; margin: 10px;line-height: 50px; padding-top: 3px;">
-                    <br>
-                    <input type=submit value=Upload style="background-color: #3AAFA9; border-color: #3AAFA9; color: white;">
-                </form>
-  
-                </div>
-                </center>
-            </div> <!-- end home-content__main -->
-
-        </div> <!-- end home-content -->
-
-    </section> <!-- end s-home -->
-
-    
-    <!-- footer -->
-    <!--==================================================-->
-    <footer class="s-footer footer">
-
-        <div class="row footer__bottom">
-            <div class="col-five tab-full">
-                <div class="footer__site-links">
-                    <a class="logo" href="{{ url_for('index') }}" style="text-align: center;">
-                        Deep Audiobook Tuner
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-six tab-full end">
-                <ul class="footer__site-links">
-                    <li><a href="{{ url_for('index') }}" title="intro">Home</a></li>
-                    <li><a href="{{ url_for('index') }}" title="about">About</a></li>
-                    <li><a href="{{ url_for('index') }}" title="process">Process</a></li>
-                    <li><a href="{{ url_for('index') }}" title="team">Team</a></li>
-                    <li><a href="{{ url_for('upload_file') }}" title="system">System</a></li>
-                </ul>
-
-            </div>
+        <div class="row about-container" style="border: 1px solid #2B7A78; padding: 40px; margin: 20px;">
+            <form action="" method=post enctype=multipart/form-data>
+                <p><input type=file name=file>
+                <br><br><br>
+                <input type=submit value=Upload style="background-color: #3AAFA9; color: white; padding-left: 20px; padding-right: 20px;">
+            </form>
         </div>
 
-        <!-- <div class="go-top">
-            <a class="smoothscroll" title="Back to Top" href="{{ url_for('upload_file') }}"></a>
-        </div> -->
-
-        <p class="footer__contact">
-            Do you have a question? Send us a word: <br>
-            <a href="mailto:danlobo1999@gmail.com " class="footer__mail-link">danlobo1999@gmail.com </a><br>
-            <a href="mailto:jendcruz23@gmail.com" class="footer__mail-link">jendcruz23@gmail.com</a><br>
-            <a href="mailto:smitashobha1999@gmail.com" class="footer__mail-link">smitashobha1999@gmail.com</a><br>
-            <a href="mailto:fernandeslder@gmail.com" class="footer__mail-link">fernandeslder@gmail.com</a>
-        </p>
-
-        <div class="cl-copyright">
-            <span><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            </span>
-        </div>
-
-    </footer> <!-- end s-footer -->
-
-
-    <!-- Java Script -->
-    <!--==================================================-->
-    <script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/plugins.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+      </div>
+      </center>
+    </section>
+    <!-- End About section -->
     
-    </body>
-                      
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{{ url_for('static', filename='vendor/aos/aos.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/glightbox/js/glightbox.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/php-email-form/validate.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/purecounter/purecounter.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.js') }}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+
+</html>
