@@ -3,6 +3,8 @@ from werkzeug.utils import secure_filename
 from flask import Flask, flash, request, redirect, send_file, render_template
 import shutil
 
+from clean_folder import *
+
 UPLOAD_FOLDER = 'uploads/'
 DOWNLOAD_FOLDER = 'downloads/'
 EMOTIONS_FOLDER = './static/emotions/'
@@ -23,67 +25,12 @@ def index():
 @app.route('/uploadfile', methods=['GET', 'POST'])
 def upload_file():
 
-    # Delete existing files from the upload, download, and audio folders before processing the next/new input audio
-    if len(os.listdir('./uploads/') ) != 0:
-        for filename in os.listdir(UPLOAD_FOLDER):
-            file_path1 = os.path.join(UPLOAD_FOLDER, filename)
-            try:
-                if filename!=".gitignore":
-                    if os.path.isfile(file_path1) or os.path.islink(file_path1):
-                        os.unlink(file_path1)
-
-                    elif os.path.isdir(file_path1):
-                        shutil.rmtree(file_path1)
-
-            except Exception as e:
-                print('Failed to delete. Reason: %s' % (e))
-
-    # Delete existing files from the upload, download, and audio folders before processing the next/new input audio
-    if len(os.listdir('./downloads/') ) != 0:
-        for filename in os.listdir(DOWNLOAD_FOLDER):
-            file_path2 = os.path.join(DOWNLOAD_FOLDER, filename)
-            try:
-                if filename!=".gitignore":
-                    if os.path.isfile(file_path2) or os.path.islink(file_path2):
-                        os.unlink(file_path2)
-
-                    elif os.path.isdir(file_path2):
-                        shutil.rmtree(file_path2)
-
-            except Exception as e:
-                print('Failed to delete. Reason: %s' % (e))
-    
-    # Delete existing files from the upload, download, and audio folders before processing the next/new input audio
-    if len(os.listdir('./static/emotions/') ) != 0:
-        for filename in os.listdir(EMOTIONS_FOLDER):
-            file_path3 = os.path.join(EMOTIONS_FOLDER, filename)
-            try:
-                if filename!=".gitignore":
-                    if os.path.isfile(file_path3) or os.path.islink(file_path3):
-                        os.unlink(file_path3)
-
-                    elif os.path.isdir(file_path3):
-                        shutil.rmtree(file_path3)
-
-            except Exception as e:
-                print('Failed to delete. Reason: %s' % (e))
-    
-    # Delete existing files from the upload, download, and audio folders before processing the next/new input audio
-    if len(os.listdir('./static/final_audio/') ) != 0:
-        for filename in os.listdir(FINAL_AUDIO_FOLDER):
-            file_path4 = os.path.join(FINAL_AUDIO_FOLDER, filename)
-            try:
-                if filename!=".gitignore":
-                    if os.path.isfile(file_path4) or os.path.islink(file_path4):
-                        os.unlink(file_path4)
-
-                    elif os.path.isdir(file_path4):
-                        shutil.rmtree(file_path4)
-
-            except Exception as e:
-                print('Failed to delete. Reason: %s' % (e))
-    
     if request.method == 'POST':
+        # clean the existing files from the given folders
+        clean_folder(UPLOAD_FOLDER)
+        clean_folder(DOWNLOAD_FOLDER)
+        clean_folder(EMOTIONS_FOLDER)
+        clean_folder(FINAL_AUDIO_FOLDER)
 
         # check if the post request has the file part
         if 'file' not in request.files:
@@ -141,6 +88,6 @@ def download_file(filename):
 def return_files_tut(filename):
     file_path = DOWNLOAD_FOLDER + filename
     return send_file(file_path, as_attachment=True, attachment_filename='')
-
+    
 if __name__ == "__main__":
     app.run(debug=True)
