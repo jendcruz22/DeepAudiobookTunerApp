@@ -4,7 +4,8 @@
 body {
   background: #fff;
   color: #666666;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
 }
 
 a {
@@ -24,8 +25,8 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
   margin: 0 0 20px 0;
   padding: 0;
 }
@@ -86,8 +87,8 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 32px;
   margin: 0;
   line-height: 1;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
@@ -146,7 +147,8 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: "Poppins", sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
   color: #fff;
   font-size: 14px;
   padding: 0 4px;
@@ -424,7 +426,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #home .btn-get-started {
-  font-family: "Poppins", sans-serif;
+  font-family: "Quicksand", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
@@ -618,7 +620,8 @@ section {
 #facts .counters p {
   padding: 0;
   margin: 0 0 20px 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
   font-size: 14px;
 }
 
@@ -729,7 +732,7 @@ section {
 }
 
 #system .cta-btn {
-  font-family: "Poppins", sans-serif;
+  font-family: "Quicksand", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
