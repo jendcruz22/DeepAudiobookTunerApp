@@ -10,19 +10,19 @@ Werkzeug==1.0.1
 python-dotenv==0.15.0
 
 # Dependencies
-notebook
-pandas==1.2.2
+# notebook
+# pandas==1.2.2
 
 # Audio analysis/segmentation
-librosa==0.8.0
-numba==0.48
-pydub==0.24.1
-tensorflow==2.4.1
-keras==2.4.3
-scikit-learn
+# librosa==0.8.0
+# numba==0.48
+# pydub==0.24.1
+# tensorflow==2.4.1
+# keras==2.4.3
+# scikit-learn
 
 # Audio Transcription
-ibm-watson==5.1.0
+# ibm-watson==5.1.0
 
 # Text analysis 
-ktrain==0.26.2
+# ktrain==0.26.2
