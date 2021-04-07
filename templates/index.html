@@ -22,7 +22,7 @@
   <link href="{{ url_for('static', filename='img/icons/icon.png') }}" rel="icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,700|Prata" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Work+Sans:300" rel="stylesheet">
   
   <!-- Vendor CSS Files -->
   <link href="{{ url_for('static', filename='vendor/aos/aos.css') }}" rel="stylesheet">
@@ -63,9 +63,9 @@
         <u>D</u>eep <u>A</u>udiobook <u>T</u>uner
       </h1>
 
-      <h3>
+      <p style="font-size: 20px;">
         Background Music generation for audiobooks based on predicted sentiments.
-      </h3>
+      </p>
       <a href="#about" class="btn-get-started">Learn More</a>
     </div>
   </section>
@@ -82,7 +82,7 @@
         </div>
         <div class="row about-container">
           <div class="col-lg-6 content order-lg-1 order-2">
-            <p>
+            <p style="font-weight: 900;">
               Music plays a very important role in people’s lives. The music industry is worth $19 billion 
               however the average person doesn’t have a vast knowledge of music theory. This makes it 
               difficult for these people to come up with original and catchy melodies. Automating the 
@@ -115,7 +115,7 @@
 
         <div class="section-header">
           <h3 class="section-title">How the System Works?</h3>
-          <p class="section-description">Following are the steps used in DAT's application</p>
+          <p class="section-description" style="font-size: 18px; font-family: 'Work Sans', sans-serif; font-weight: 900; color: grey;">Following are the steps used in DAT's application</p>
         </div>
 
         <div class="row">
@@ -123,7 +123,7 @@
           <div class="col-lg-4 col-md-6" data-aos="zoom-in">
             <div class="box">
               <div class="icon"><i class="bi bi-file-earmark-text"></i></div>
-              <h4 class="title">Script Segmentation</h4>
+              <h4 class="title">Audio Segmentation</h4>
               <!-- <p class="description">Insert info</p> -->
             </div>
           </div>
@@ -131,7 +131,7 @@
           <div class="col-lg-4 col-md-6" data-aos="zoom-in">
             <div class="box">
               <div class="icon"><i class="bi bi-fonts"></i></div>
-              <h4 class="title">Extraction of topic from every segment</h4>
+              <h4 class="title">Transcription</h4>
               <!-- <p class="description">Insert info</p> -->
             </div>
           </div>
@@ -139,7 +139,7 @@
           <div class="col-lg-4 col-md-6" data-aos="zoom-in">
             <div class="box">
               <div class="icon"><i class="bi bi-emoji-smile"></i></div>
-              <h4 class="title">Sentiment Prediction of each topic</h4>
+              <h4 class="title">Audio and Text based sentiment analysis</h4>
               <!-- <p class="description">Insert info</p> -->
             </div>
           </div>
@@ -147,7 +147,7 @@
           <div class="col-lg-4 col-md-6" data-aos="zoom-in">
             <div class="box">
               <div class="icon"><i class="bi bi-music-note-list"></i></div>
-              <h4 class="title">Feed the predicted system to the Music Generation Model</h4>
+              <h4 class="title">Music Generation for every sentiment considered</h4>
               <!-- <p class="description">Insert info</p> -->
             </div>
           </div>
@@ -155,7 +155,7 @@
           <div class="col-lg-4 col-md-6" data-aos="zoom-in">
             <div class="box">
               <div class="icon"><i class="bi bi-file-music"></i></div>
-              <h4 class="title">Generating music sequences based on sentiments</h4>
+              <h4 class="title">Creating one background music file</h4>
               <!-- <p class="description">Insert info</p> -->
             </div>
           </div>
@@ -163,7 +163,7 @@
           <div class="col-lg-4 col-md-6" data-aos="zoom-in">
             <div class="box">
               <div class="icon"><i class="bi bi-music-player"></i></div>
-              <h4 class="title">Combine the audio and music file</h4>
+              <h4 class="title">Combining the audiobook and background music</h4>
               <!-- <p class="description">Insert info</p> -->
             </div>
           </div>
@@ -179,7 +179,7 @@
       <div class="container">
         <div class="row" data-aos="zoom-in">
           <div class="col-lg-12 text-center">
-            <h3 class="cta-title">System</h3>
+            <h1 class="cta-title">System</h1>
             <p class="cta-text"> Use the system, see how DAT works.</p>
             <a class="cta-btn" href="{{ url_for('upload_file', _anchor='about') }}">Check it out</a>
           </div>
@@ -200,7 +200,7 @@
             <div class="member" data-aos="fade-up" data-aos-delay="100">
               <div class="pic"><img src="{{ url_for('static', filename='img/Dan.jpg') }}" alt=""></div>
               <h4>Daniel Lobo</h4>
-              <span>BE CMPN A - 06 | PID - 172028</span>
+              <span style="font-size: 15px; font-family: 'Work Sans', sans-serif; font-weight: 900;">BE CMPN A - 06 | PID - 172028</span>
               <div class="social">
                 <a href="mailto:danlobo1999@gmail.com" target="_blank"><i class="bi bi-envelope"></i></a>
                 <a href="https://github.com/danlobo1999" target="_blank"><i class="bi bi-github"></i></a>
@@ -214,7 +214,7 @@
             <div class="member" data-aos="fade-up" data-aos-delay="200">
               <div class="pic"><img src="{{ url_for('static', filename='img/Jen.jpg') }}" alt=""></div>
               <h4>Jenny Dcruz</h4>
-              <span>BE CMPN A - 14 | PID - 172047</span>
+              <span style="font-size: 15px; font-family: 'Work Sans', sans-serif; font-weight: 900;">BE CMPN A - 14 | PID - 172047</span>
               <div class="social">
                 <a href="mailto:jendcruz23@gmail.com" target="_blank"><i class="bi bi-envelope"></i></a>
                 <a href="https://github.com/jendcruz22" target="_blank"><i class="bi bi-github"></i></a>
@@ -228,7 +228,7 @@
             <div class="member" data-aos="fade-up" data-aos-delay="300">
               <div class="pic"><img src="{{ url_for('static', filename='img/Smi.jpg') }}" alt=""></div>
               <h4>Smita Deulkar</h4>
-              <span>BE CMPN A - 17 | PID - 172113</span>
+              <span style="font-size: 15px; font-family: 'Work Sans', sans-serif; font-weight: 900;">BE CMPN A - 17 | PID - 172113</span>
               <div class="social">
                 <a href="mailto:smitashobha1999@gmail.com" target="_blank"><i class="bi bi-envelope"></i></a>
                 <a href="https://github.com/smita3199" target="_blank"><i class="bi bi-github"></i></a>
@@ -242,7 +242,7 @@
             <div class="member" data-aos="fade-up" data-aos-delay="400">
               <div class="pic"><img src="{{ url_for('static', filename='img/Lder.jpg') }}" alt=""></div>
               <h4>Leander Fernandes</h4>
-              <span>BE CMPN A - 18 | PID - 172061</span>
+              <span style="font-size: 15px; font-family: 'Work Sans', sans-serif; font-weight: 900;">BE CMPN A - 18 | PID - 172061</span>
               <div class="social">
                 <div class="social">
                   <a href="mailto:fernandeslder@gmail.com" target="_blank"><i class="bi bi-envelope"></i></a>

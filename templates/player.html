@@ -22,7 +22,7 @@
   <link href="{{ url_for('static', filename='img/icons/icon.png') }}" rel="icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,700|Prata" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Work+Sans:300" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="{{ url_for('static', filename='vendor/aos/aos.css') }}" rel="stylesheet">
@@ -66,7 +66,7 @@
       <br>
 
       <div class="col-lg-6"></div>
-        <h3>
+        <p style="font-size: 20px;">
           For every emotion considered by this system, a musical score is generated.
           <br>
           Click proceed if you are happy with all the tunes generated and 
@@ -74,9 +74,9 @@
           would like to move on to the next step. Else, click the 
           <br>
           retry button next to the unsatisfactory audio file.
-        </h3>
+        </p>
         <br>
-        <a href="#process" class="btn-get-started">Noted. Now show me some tunes!</a>
+        <a href="#process" class="btn-get-started" style="font-size: 15px; font-weight: 500;">Noted. Now show me some tunes!</a>
       </div>
     </div>
   </section>
@@ -103,7 +103,7 @@
               </audio>
               <br>
               <center>
-                <a style="width: 60%; background-color: #3AAFA9; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;" href="(url_for('upload_file',_anchor='about'))" class="btn-get-started">Retry</a>
+                <a style="width: 60%; background-color: #3AAFA9; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;" href="{{ url_for('upload_file', _anchor='about') }}" class="btn-get-started">Retry</a>
               </center>
           </div>
         </div>
@@ -118,7 +118,7 @@
               </audio>
               <br>
               <center>
-                <a style="width: 60%; background-color: #3AAFA9; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;" href="(url_for('upload_file',_anchor='about'))" class="btn-get-started">Retry</a>
+                <a style="width: 60%; background-color: #3AAFA9; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;" href="{{ url_for('upload_file', _anchor='about') }}" class="btn-get-started">Retry</a>
               </center>
           </div>
         </div>
@@ -133,7 +133,7 @@
               </audio>
               <br>
               <center>
-                <a style="width: 60%; background-color: #3AAFA9; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;" href="(url_for('upload_file',_anchor='about'))" class="btn-get-started">Retry</a>
+                <a style="width: 60%; background-color: #3AAFA9; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;" href="{{ url_for('upload_file', _anchor='about') }}" class="btn-get-started">Retry</a>
               </center>
           </div>
         </div>
@@ -141,14 +141,14 @@
         <div class="col-lg-6 col-md-6" data-aos="zoom-in">
           <div class="box" style="height: 70%;">
               <div class="icon"><i class="bi bi-card-checklist"></i></div>
-              <h4 class="title">Surprise</h4>      
+              <h4 class="title">Neutral</h4>      
               <audio controls>
                   <source src="/play_audio/{{value}}" type="audio/ogg">
                   <source src="/play_audio/{{value}}" type="audio/mpeg">
               </audio>
               <br>
               <center>
-                <a style="width: 60%; background-color: #3AAFA9; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;" href="(url_for('upload_file',_anchor='about'))" class="btn-get-started">Retry</a>
+                <a style="width: 60%; background-color: #3AAFA9; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;" href="{{ url_for('upload_file', _anchor='about') }}" class="btn-get-started">Retry</a>
               </center>
           </div>
         </div>

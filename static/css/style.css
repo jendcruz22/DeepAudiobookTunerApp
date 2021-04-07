@@ -4,8 +4,8 @@
 body {
   background: #fff;
   color: #666666;
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 900;
 }
 
 a {
@@ -22,11 +22,13 @@ a:hover, a:active, a:focus {
 p {
   padding: 0;
   margin: 0 0 30px 0;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 900;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Prata', serif;
-  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
   margin: 0 0 20px 0;
   padding: 0;
 }
@@ -87,8 +89,8 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 32px;
   margin: 0;
   line-height: 1;
-  font-family: 'Prata', serif;
-  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
@@ -147,8 +149,8 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: 'Prata', serif;
-  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
   color: #fff;
   font-size: 14px;
   padding: 0 4px;
@@ -426,9 +428,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #home .btn-get-started {
-  font-family: 'Prata', serif;
+  font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 900;
   font-size: 16px;
   letter-spacing: 1px;
   display: inline-block;
@@ -481,7 +483,7 @@ section {
 
 .breadcrumbs h2 {
   font-size: 24px;
-  font-weight: 300;
+  font-weight: 900;
   margin: 0;
 }
 
@@ -554,10 +556,14 @@ section {
 
 #about .about-container p {
   line-height: 26px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 900;
 }
 
 #about .about-container p:last-child {
   margin-bottom: 0;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 900;
 }
 
 #about .about-container .icon-box {
@@ -588,7 +594,7 @@ section {
 
 #about .about-container .icon-box .title {
   margin-left: 80px;
-  font-weight: 500;
+  font-weight: 900;
   margin-bottom: 5px;
   font-size: 18px;
   text-transform: uppercase;
@@ -620,9 +626,11 @@ section {
 #facts .counters p {
   padding: 0;
   margin: 0 0 20px 0;
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 900;
   font-size: 14px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 900;
 }
 
 /* process section
@@ -732,9 +740,9 @@ section {
 }
 
 #system .cta-btn {
-  font-family: 'Prata', serif;
+  font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 900;
   font-size: 16px;
   letter-spacing: 1px;
   display: inline-block;
@@ -749,170 +757,6 @@ section {
 #system .cta-btn:hover {
   background: #3AAFA9;
   border: 2px solid #3AAFA9;
-}
-
-/* Portfolio section
---------------------------------*/
-#portfolio {
-  background: #f7f7f7;
-  padding: 80px 0;
-}
-
-#portfolio #portfolio-flters {
-  padding: 0;
-  margin: 0 auto 25px auto;
-  list-style: none;
-  text-align: center;
-  border-radius: 50px;
-}
-
-#portfolio #portfolio-flters li {
-  cursor: pointer;
-  display: inline-block;
-  padding: 12px 18px 14px 18px;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
-  color: #666666;
-  margin: 0 5px 10px 5px;
-  transition: all ease-in-out 0.3s;
-  background: white;
-  border-radius: 4px;
-}
-
-#portfolio #portfolio-flters li:hover, #portfolio #portfolio-flters li.filter-active {
-  color: #fff;
-  background: #3AAFA9;
-}
-
-#portfolio #portfolio-flters li:last-child {
-  margin-right: 0;
-}
-
-#portfolio .portfolio-item {
-  margin-bottom: 30px;
-  overflow: hidden;
-}
-
-#portfolio .portfolio-item img {
-  position: relative;
-  top: 0;
-  transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-
-#portfolio .portfolio-item .portfolio-info {
-  opacity: 0;
-  position: absolute;
-  left: 12px;
-  right: 12px;
-  bottom: -50px;
-  z-index: 3;
-  transition: all ease-in-out 0.3s;
-  background: #3AAFA9;
-  padding: 15px 20px;
-}
-
-#portfolio .portfolio-item .portfolio-info h4 {
-  font-size: 18px;
-  color: #fff;
-  font-weight: 600;
-}
-
-#portfolio .portfolio-item .portfolio-info p {
-  color: #fff;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-#portfolio .portfolio-item .portfolio-info .preview-link, #portfolio .portfolio-item .portfolio-info .details-link {
-  position: absolute;
-  right: 50px;
-  font-size: 24px;
-  top: calc(50% - 18px);
-  color: white;
-  transition: ease-in-out 0.3s;
-}
-
-#portfolio .portfolio-item .portfolio-info .preview-link:hover, #portfolio .portfolio-item .portfolio-info .details-link:hover {
-  color: #a4ebd4;
-}
-
-#portfolio .portfolio-item .portfolio-info .details-link {
-  right: 15px;
-}
-
-#portfolio .portfolio-item:hover img {
-  top: -30px;
-}
-
-#portfolio .portfolio-item:hover .portfolio-info {
-  opacity: 1;
-  bottom: 0;
-}
-
-/*--------------------------------------------------------------
-# Portfolio Details
---------------------------------------------------------------*/
-.portfolio-details {
-  padding-top: 40px;
-}
-
-.portfolio-details .portfolio-details-slider img {
-  width: 100%;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #fff;
-  opacity: 1;
-  border: 1px solid #3AAFA9;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #3AAFA9;
-}
-
-.portfolio-details .portfolio-info {
-  padding: 30px;
-  box-shadow: 0px 0 30px rgba(102, 102, 102, 0.08);
-}
-
-.portfolio-details .portfolio-info h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
-}
-
-.portfolio-details .portfolio-info ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-
-.portfolio-details .portfolio-info ul li + li {
-  margin-top: 10px;
-}
-
-.portfolio-details .portfolio-description {
-  padding-top: 30px;
-}
-
-.portfolio-details .portfolio-description h2 {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.portfolio-details .portfolio-description p {
-  padding: 0;
 }
 
 /* Team section
@@ -946,7 +790,9 @@ section {
 #team .member span {
   font-style: italic;
   display: block;
-  font-size: 13px;
+  font-size: 300px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 900;
 }
 
 #team .member .social {
@@ -968,6 +814,11 @@ section {
 
 /* Upload section
 --------------------------------*/
+p{
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 900;
+}
+
 input[type=file]::-webkit-file-upload-button {
   padding: 10px;
   background-color: lightgray;
