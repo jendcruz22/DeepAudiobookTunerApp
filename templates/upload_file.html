@@ -35,6 +35,32 @@
   <!-- Template Main CSS File -->
   <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
 
+  <style>
+    input[type=file]::-webkit-file-upload-button {
+      padding: 10px;
+      background-color: lightgray;
+      transition: .1s;
+      font-size: 20px;
+    }
+
+    input[type=file]::file-selector-button {
+      padding: 10px;
+      background-color: lightgray;
+      transition: .1s;
+      font-size: 20px;
+    }
+
+    input[type=file]::-webkit-file-upload-button:hover {
+      background-color: darkgrey;
+      font-size: 20px;
+    }
+
+    input[type=file]::file-selector-button:hover {
+      background-color: darkgrey;
+      font-size: 20px;
+    }
+    
+  </style>
 </head>
 
 <body>
@@ -74,7 +100,7 @@
   <main id="main">
 
     <!-- ======= About section ======= -->
-    <section id="about">
+    <section id="about" style="background-color: #E8E8E8;">
       <center>
       <div class="container" data-aos="fade-up">
         <div class="section-header">
@@ -82,11 +108,17 @@
           <p class="section-description">Upload your mp3 audio file below.</p>
         </div>
 
-        <div class="row about-container" style="border: 1px solid #2B7A78; padding: 40px; margin: 20px;">
-            <form action="" method=post enctype=multipart/form-data>
+        <div class="row about-container" style="background-color: white; border: 1px solid #000000; padding: 40px; margin: 20px;">
+            <!-- <form action="" method=post enctype=multipart/form-data>
                 <p><input type=file name=file>
                 <br><br><br>
-                <input type=submit value=Upload style="background-color: #3AAFA9; color: white; padding-left: 20px; padding-right: 20px;">
+                <input type=submit value=Upload style="border-radius: 25px; background-color: #3AAFA9; color: white; font-size: 20px; width: 200px; height: 50px; box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);">
+            </form> -->
+            <form method=post enctype=multipart/form-data>
+              <!-- <label for="fileUpload"></label> -->
+              <input type="file" name=file id="fileUpload">
+              <br><br>
+              <input type=submit value=Upload style="border: 2px; color: white; font-size: 20px; width: 150px; height: 50px; background-color: #2B7A78;" onMouseOver="this.style.backgroundColor='#3AAFA9'" onMouseOut="this.style.backgroundColor='#2B7A78'">
             </form>
         </div>
 
