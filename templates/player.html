@@ -98,10 +98,8 @@
               <div class="icon"><i class="bi bi-emoji-smile-fill"></i></div>
               <h4 class="title">Happy</h4>
               <audio controls>
-                  <source src="/play_audio/{{value}}" type="audio/ogg">
-                  <source src="/play_audio/{{value}}" type="audio/mpeg">
+                <source src="{{ url_for('static', filename=clips[0]) }}" type="audio/mpeg">
               </audio>
-              <br>
               <center>
                 <a style="width: 60%; background-color: #3AAFA9; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;" href="{{ url_for('upload_file', _anchor='about') }}" class="btn-get-started">Retry</a>
               </center>
@@ -113,8 +111,7 @@
               <div class="icon"><i class="bi bi-emoji-frown-fill"></i></div>
               <h4 class="title">Sad</h4>
               <audio controls>
-                  <source src="/play_audio/{{value}}" type="audio/ogg">
-                  <source src="/play_audio/{{value}}" type="audio/mpeg">
+                <source src="{{ url_for('static', filename=clips[1]) }}" type="audio/mpeg">
               </audio>
               <br>
               <center>
@@ -128,8 +125,7 @@
               <div class="icon"><i class="bi bi-emoji-angry-fill"></i></div>
               <h4 class="title">Angry</h4>
               <audio controls>
-                  <source src="/play_audio/{{value}}" type="audio/ogg">
-                  <source src="/play_audio/{{value}}" type="audio/mpeg">
+                <source src="{{ url_for('static', filename=clips[2]) }}" type="audio/mpeg">
               </audio>
               <br>
               <center>
@@ -143,8 +139,7 @@
               <div class="icon"><i class="bi bi-emoji-neutral-fill"></i></div>
               <h4 class="title">Neutral</h4>      
               <audio controls>
-                  <source src="/play_audio/{{value}}" type="audio/ogg">
-                  <source src="/play_audio/{{value}}" type="audio/mpeg">
+                <source src="{{ url_for('static', filename=clips[3]) }}" type="audio/mpeg">
               </audio>
               <br>
               <center>

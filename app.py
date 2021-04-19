@@ -6,15 +6,20 @@ import sys
 sys.path.append(os.path.abspath("../"))
 import tensorflow as tf
 from deepaudiobooktuner.deep_audiobook_tuner import *
+from deepaudiobooktuner.utils.paths import path
 
 from clean_folder import *
+
+physical_devices = tf.config.experimental.list_physical_devices('GPU')
+if len(physical_devices) > 0:
+   tf.config.experimental.set_memory_growth(physical_devices[0], True)
 
 UPLOAD_FOLDER = 'uploads/'
 
 app = Flask(__name__, template_folder='templates')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-# dat = deepAudiobookTuner()
+dat = deepAudiobookTuner()
 
 # Home page
 @app.route('/')
@@ -55,15 +60,30 @@ def upload_file():
 # Player API
 @app.route("/player/<filename>", methods = ['GET', 'POST'])
 def player(filename):
-    file_path = EMOTIONS_FOLDER + filename
+    
+    audiobook_file_path = path(f'{UPLOAD_FOLDER}/{filename}')
+
+    dat.initialize(audiobook_path = audiobook_file_path)
+    # dat.analyzeSentiments()
+    dat.generateMusic()
+
+    emotions = ["Happy", "Sad", "Angry", "Neutral"]
+    clips = []
+    for emotion in emotions:
+        full_path = f"{dat.paths['music_clips_save_path']}/{emotion}.mp3"
+        elements = full_path.split("\\")
+        clips.append("temp/" + "/".join(elements[len(elements) - 2 :])) 
+
+    file_path = UPLOAD_FOLDER + filename
     if request.method == 'POST':
-        # return send_file(file_path, as_attachment=True, attachment_filename='')
+        return send_file(file_path, as_attachment=True, attachment_filename='')
         return redirect('/final_product/'+ filename)
-    return render_template('player.html', value=filename)
+
+    return render_template('player.html', clips=clips)
 
 @app.route('/play_audio/<filename>')
 def play_audio(filename):
-    file_path = EMOTIONS_FOLDER + filename
+    file_path = UPLOAD_FOLDER + filename
     return send_file(file_path, as_attachment=True, attachment_filename='')
 
 # Final Audio API
