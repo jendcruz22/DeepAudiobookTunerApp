@@ -13,22 +13,22 @@ def createDir(file_path):
 
     paths = {
         "audio_model": path(
-            "../assets/audio_sentiment_data_v2/models/hyperband_tuned_modelfinal[0.260879248380661, 0.9069767594337463]/"
+            "../../assets/models/audio_sentiment_model/"
         ),
-        "pickles": path("../assets/audio_sentiment_data_v2/pickles"),
-        "text_model": path("../assets/text_sentiment_data/models/my_bert_model/"),
+        "pickles": path("../../assets/pickles"),
+        "text_model": path("../../assets/models/text_sentiment_model/"),
         "music_model": path(
-            "../assets/music_generation/models/MusicTransformerKeyC.pth"
+            "../../assets/models/music_model/MusicTransformerKeyC.pth"
         ),
-        "music_data": path("../assets/music_generation/pickles/"),
-        "music_samples": path("../assets/music_generation/datasets/vg-midi-annotated"),
-        "wav_save_path": path(f"../assets/temp/{file_name}-{creation_time}"),
-        "clips_save_path": path(f"../assets/temp/{file_name}-{creation_time}/clips"),
+        "music_data": path("../../assets/pickles/"),
+        "music_samples": path("../../assets/music_samples"),
+        "wav_save_path": path(f"../../static/temp/{file_name}-{creation_time}"),
+        "clips_save_path": path(f"../../static/temp/{file_name}-{creation_time}/clips"),
         "music_clips_save_path": path(
-            f"../assets/temp/{file_name}-{creation_time}/music_clips"
+            f"../../static/temp/{file_name}-{creation_time}/music_clips"
         ),
         "final_audiobook_save_path": path(
-            f"../assets/temp/{file_name}-{creation_time}/final_audiobook"
+            f"../../static/temp/{file_name}-{creation_time}/final_audiobook"
         ),
     }
 
