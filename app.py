@@ -63,10 +63,16 @@ def player(filename):
     
     audiobook_file_path = path(f'{UPLOAD_FOLDER}/{filename}')
 
+    # Initialize the deepAudiobookTuner instance with the audiobook file path
     dat.initialize(audiobook_path = audiobook_file_path)
-    # dat.analyzeSentiments()
+
+    # Analyze sentiments from the audiobook
+    dat.analyzeSentiments()
+
+    # Generate muisc clips for the emotions
     dat.generateMusic()
 
+    # Pruning the paths to the music clips
     emotions = ["Happy", "Sad", "Angry", "Neutral"]
     clips = []
     for emotion in emotions:
@@ -74,22 +80,38 @@ def player(filename):
         elements = full_path.split("\\")
         clips.append("temp/" + "/".join(elements[len(elements) - 2 :])) 
 
-    file_path = UPLOAD_FOLDER + filename
     if request.method == 'POST':
-        return send_file(file_path, as_attachment=True, attachment_filename='')
-        return redirect('/final_product/'+ filename)
+        # Generate the final soundtrack and overlay it on the audiobook
+        # dat.generateSoundtrack()
+
+        # dat_audiobook_path = dat.final_audiobook
+        # print(dat_audiobook_path)
+    
+
+        # file_path = UPLOAD_FOLDER + filename
+
+        # return send_file(file_path, as_attachment=True, attachment_filename='')
+        return redirect('/final_product/')
 
     return render_template('player.html', clips=clips)
 
-@app.route('/play_audio/<filename>')
-def play_audio(filename):
-    file_path = UPLOAD_FOLDER + filename
-    return send_file(file_path, as_attachment=True, attachment_filename='')
+# @app.route('/play_audio/<filename>')
+# def play_audio(filename):
+#     file_path = UPLOAD_FOLDER + filename
+#     return send_file(file_path, as_attachment=True, attachment_filename='')
 
 # Final Audio API
-@app.route("/final_product/<filename>", methods = ['GET', 'POST'])
-def final_product(filename):
-    return render_template('final_product.html', value=filename)
+@app.route("/final_product/", methods = ['GET', 'POST'])
+def final_product():
+    # Generate the final soundtrack and overlay it on the audiobook
+    dat.generateSoundtrack()
+    print(dat.paths["final_audiobook_save_path"])
+    
+    full_path = dat.paths["final_audiobook_save_path"]
+    elements = full_path.split("\\")
+    dat_audiobook_path = "temp/" + "/".join(elements[len(elements) - 2 :]) + f"/{dat.file_name}-dat.mp3"
+
+    return render_template('final_product.html', dat_audiobook_path=dat_audiobook_path)
 
 # Download API
 @app.route("/downloadfile/<filename>", methods = ['GET', 'POST'])

@@ -68,8 +68,7 @@
       </p>
 
       <audio controls>
-        <source src="/play_audio/{{value}}" type="audio/ogg">
-        <source src="/play_audio/{{value}}" type="audio/mpeg">
+        <source src="{{ url_for('static', filename=dat_audiobook_path) }}" type="audio/mpeg">
       </audio>
 
       <br><br>
