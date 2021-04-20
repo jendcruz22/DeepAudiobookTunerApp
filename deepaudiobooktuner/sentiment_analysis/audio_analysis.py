@@ -6,7 +6,7 @@ import pickle
 import time
 
 
-def loadAudioAssets(model_path, pickles_path):
+def load_audio_assets(model_path, pickles_path):
     # Load the model
     model = tf.keras.models.load_model(model_path)
 
