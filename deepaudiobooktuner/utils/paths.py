@@ -18,7 +18,7 @@ def createDir(file_path):
         "pickles": path("assets/pickles"),
         "text_model": path("assets/models/text_sentiment_model/"),
         "music_model": path(
-            "assets/models/music_model/MusicTransformerKeyC.pth"
+            "assets/models/music_model/MusicTransformer.pth"
         ),
         "music_data": path("assets/pickles/"),
         "music_samples": path("assets/music_samples"),
