@@ -133,8 +133,8 @@
             <div class="box">
               <div class="icon"><i class="bi bi-fonts"></i></div>
               <h4 class="title">Transcription</h4>
-              <p class="description">Transcription is the process of converting speech to text. We transcribe the audio 
-                segments produced in the previous step in order to provide an input to our hybrid Sentiment Analysis model.</p>
+              <p class="description">Using IBM's 'Watson Speech to Text' we transcribe the audio 
+                segments produced in the previous step in order to provide a text input to our Text Sentiment Analysis model.</p>
             </div>
           </div>
 
@@ -142,10 +142,7 @@
             <div class="box">
               <div class="icon"><i class="bi bi-emoji-smile"></i></div>
               <h4 class="title">Audio and Text based sentiment analysis</h4>
-              <p class="description">The segmented audio is provided as input to the Audio Based Sentiment Analysis model that uses a DNN to 
-                extract the audio features and scale them in order to create a list of predicted emotions.
-                The Text Based Sentiment Analysis uses the BERT model to generate a list of predicted emotions. 
-                The emotions predicted by both models are averaged out in order to generate a final list of emotions</p>
+              <p class="description">The Audio and Text sentiment analysis model provide a list of predicted emotions for the audio segments.</p>
             </div>
           </div>
 
@@ -153,7 +150,7 @@
             <div class="box">
               <div class="icon"><i class="bi bi-music-note-list"></i></div>
               <h4 class="title">Music Generation for every sentiment considered</h4>
-              <p class="description">Using Transformer XL, our model generates unique musical scores for every emotion considered 
+              <p class="description">Our Music generation model generates unique musical scores for every emotion considered 
                 by the Deep Audiobook Tuner System.</p>
             </div>
           </div>
