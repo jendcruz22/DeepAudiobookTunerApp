@@ -142,7 +142,7 @@ def return_files_tut(filename):
     return send_file(file_path, as_attachment=True, attachment_filename='')
 
 @app.route('/demo')
-def index():
+def demo():
     return render_template('demo.html')
 
 if __name__ == "__main__":
