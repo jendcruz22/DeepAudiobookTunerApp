@@ -62,16 +62,6 @@
     </div>
   </header><!-- End Header -->
 
-  <div id="preloader" class="animation">
-		<div class="decor">
-			<div class="bar"></div>
-		</div>
-		<p>Loading...</p>
-	</div>
-
-	<div class="pre-overlay o-1"></div>
-		<div class="pre-overlay o-2"></div>
-
   <!-- ======= home section ======= -->
   <section id="home">
     <div class="home-container" data-aos="fade-up" data-aos-delay="100">
@@ -114,7 +104,7 @@
               <div class="icon"><i class="bi bi-emoji-smile-fill"></i></div>
               <h4 class="title">Happy</h4>
               <audio controls controlsList="nodownload" id="happy-play">
-                <source src="{{ url_for('static', filename=clips[0]) }}" type="audio/mpeg">
+                <source src="{{ url_for('static', filename=data[0]) }}" type="audio/mpeg">
               </audio>
               <center>
                 <form method="post" id="regenerate-happy">
@@ -132,7 +122,7 @@
               <div class="icon"><i class="bi bi-emoji-frown-fill"></i></div>
               <h4 class="title">Sad</h4>
               <audio controls controlsList="nodownload" id="sad-play">
-                <source src="{{ url_for('static', filename=clips[1]) }}" type="audio/mpeg">
+                <source src="{{ url_for('static', filename=data[1]) }}" type="audio/mpeg">
               </audio>
               <br>
               <center>
@@ -151,7 +141,7 @@
               <div class="icon"><i class="bi bi-emoji-angry-fill"></i></div>
               <h4 class="title">Angry</h4>
               <audio controls  controlsList="nodownload" id="angry-play">
-                <source src="{{ url_for('static', filename=clips[2]) }}" type="audio/mpeg">
+                <source src="{{ url_for('static', filename=data[2]) }}" type="audio/mpeg">
               </audio>
               <br>
               <center>
@@ -170,7 +160,7 @@
               <div class="icon"><i class="bi bi-emoji-neutral-fill"></i></div>
               <h4 class="title">Neutral</h4>      
               <audio controls controlsList="nodownload" id="neutral-play">
-                <source src="{{ url_for('static', filename=clips[3]) }}" type="audio/mpeg">
+                <source src="{{ url_for('static', filename=data[3]) }}" type="audio/mpeg">
               </audio>
               <br>
               <center>
