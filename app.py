@@ -67,7 +67,7 @@ def player(filename):
     dat.initialize(audiobook_path = audiobook_file_path)
 
     # Analyze sentiments from the audiobook
-    dat.analyzeSentiments()
+    # dat.analyzeSentiments()
 
     # Generate muisc clips for the emotions
     dat.generateMusic()
@@ -96,9 +96,27 @@ def player(filename):
     return render_template('player.html', clips=clips)
 
 # @app.route('/play_audio/<filename>')
-# def play_audio(filename):
+# def regenerate_music(filename):
 #     file_path = UPLOAD_FOLDER + filename
 #     return send_file(file_path, as_attachment=True, attachment_filename='')
+
+
+@app.route('/regenerate_music/', methods=['POST'])
+def regenerate_music():
+     emotion = None
+     if request.method == "POST":
+        emotion = [request.form.get("data")]
+        print(emotion)
+        dat.generateMusic(music_emotions=emotion)
+        
+        emotions = ["Happy", "Sad", "Angry", "Neutral"]
+        clips = []
+        for emotion in emotions:
+            full_path = f"{dat.paths['music_clips_save_path']}/{emotion}.mp3"
+            elements = full_path.split("\\")
+            clips.append("temp/" + "/".join(elements[len(elements) - 2 :])) 
+
+     return render_template('player.html', clips=clips)
 
 # Final Audio API
 @app.route("/final_product/", methods = ['GET', 'POST'])

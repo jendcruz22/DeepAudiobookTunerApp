@@ -4,16 +4,18 @@
 body {
   background: #fff;
   color: #666666;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-weight: 900;
 }
 
 a {
-  color: #3AAFA9;
+  color: #3aafa9;
   text-decoration: none;
 }
 
-a:hover, a:active, a:focus {
+a:hover,
+a:active,
+a:focus {
   color: #2dca98;
   outline: none;
   text-decoration: none;
@@ -22,12 +24,17 @@ a:hover, a:active, a:focus {
 p {
   padding: 0;
   margin: 0 0 30px 0;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-weight: 900;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
   font-weight: 900;
   margin: 0 0 20px 0;
   padding: 0;
@@ -43,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #3AAFA9;
+  background: #3aafa9;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -89,13 +96,14 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 32px;
   margin: 0;
   line-height: 1;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 900;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
 
-#header #logo h1 a, #header #logo h1 a:hover {
+#header #logo h1 a,
+#header #logo h1 a:hover {
   color: #fff;
 }
 
@@ -149,7 +157,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 900;
   color: #fff;
   font-size: 14px;
@@ -174,18 +182,22 @@ h1, h2, h3, h4, h5, h6 {
   height: 2px;
   bottom: -6px;
   left: 0;
-  background-color: #3AAFA9;
+  background-color: #3aafa9;
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out 0s;
 }
 
-.navbar a:hover:before, .navbar li:hover > a:before, .navbar .active:before {
+.navbar a:hover:before,
+.navbar li:hover > a:before,
+.navbar .active:before {
   visibility: visible;
   transform: scaleX(1);
 }
 
-.navbar a:hover, .navbar .active, .navbar li:hover > a {
+.navbar a:hover,
+.navbar .active,
+.navbar li:hover > a {
   color: #fff;
 }
 
@@ -219,8 +231,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 12px;
 }
 
-.navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
-  color: #3AAFA9;
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover > a {
+  color: #3aafa9;
 }
 
 .navbar .dropdown:hover > ul {
@@ -307,7 +321,9 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
-.navbar-mobile a:hover:before, .navbar-mobile li:hover > a:before, .navbar-mobile .active:before {
+.navbar-mobile a:hover:before,
+.navbar-mobile li:hover > a:before,
+.navbar-mobile .active:before {
   visibility: hidden;
 }
 
@@ -317,8 +333,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #666666;
 }
 
-.navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
-  color: #3AAFA9;
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover > a {
+  color: #3aafa9;
 }
 
 .navbar-mobile .getstarted {
@@ -349,8 +367,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 12px;
 }
 
-.navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
-  color: #3AAFA9;
+.navbar-mobile .dropdown ul a:hover,
+.navbar-mobile .dropdown ul .active:hover,
+.navbar-mobile .dropdown ul li:hover > a {
+  color: #3aafa9;
 }
 
 .navbar-mobile .dropdown > .dropdown-active {
@@ -428,7 +448,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #home .btn-get-started {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   font-weight: 900;
   font-size: 16px;
@@ -443,8 +463,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #home .btn-get-started:hover {
-  background: #3AAFA9;
-  border: 2px solid #3AAFA9;
+  background: #3aafa9;
+  border: 2px solid #3aafa9;
+}
+
+#home .btn-regenerate {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+#home .btn-regenerate:hover {
+  background: #3aafa9;
+  border: 2px solid #3aafa9;
 }
 
 /*--------------------------------------------------------------
@@ -534,7 +574,7 @@ section {
 
 #about .about-container .background {
   min-height: 300px;
-  background: url('../img/HowTheSytemWorks.PNG') center top no-repeat;
+  background: url("../img/HowTheSytemWorks.PNG") center top no-repeat;
   margin-bottom: 10px;
 }
 
@@ -556,13 +596,13 @@ section {
 
 #about .about-container p {
   line-height: 26px;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-weight: 900;
 }
 
 #about .about-container p:last-child {
   margin-bottom: 0;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-weight: 900;
 }
 
@@ -583,11 +623,11 @@ section {
   flex-direction: column;
   text-align: center;
   border-radius: 50%;
-  border: 2px solid #3AAFA9;
+  border: 2px solid #3aafa9;
 }
 
 #about .about-container .icon-box .icon i {
-  color: #3AAFA9;
+  color: #3aafa9;
   font-size: 24px;
   line-height: 0;
 }
@@ -620,16 +660,16 @@ section {
 #facts .counters span {
   font-size: 48px;
   display: block;
-  color: #3AAFA9;
+  color: #3aafa9;
 }
 
 #facts .counters p {
   padding: 0;
   margin: 0 0 20px 0;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-weight: 900;
   font-size: 14px;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-weight: 900;
 }
 
@@ -665,7 +705,7 @@ section {
   text-align: center;
   width: 72px;
   height: 72px;
-  background: #3AAFA9;
+  background: #3aafa9;
 }
 
 #process .icon a {
@@ -680,15 +720,15 @@ section {
 
 #process .box:hover .icon {
   background: #fff;
-  border: 2px solid #3AAFA9;
+  border: 2px solid #3aafa9;
 }
 
 #process .box:hover .icon i {
-  color: #3AAFA9;
+  color: #3aafa9;
 }
 
 #process .box:hover .icon a {
-  color: #3AAFA9;
+  color: #3aafa9;
 }
 
 #process .title {
@@ -710,7 +750,8 @@ section {
 /* system section
 --------------------------------*/
 #system {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/pattern.jpg) fixed center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../img/pattern.jpg) fixed center center;
   background-size: cover;
   padding: 80px 0;
 }
@@ -740,7 +781,7 @@ section {
 }
 
 #system .cta-btn {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   font-weight: 900;
   font-size: 16px;
@@ -755,8 +796,8 @@ section {
 }
 
 #system .cta-btn:hover {
-  background: #3AAFA9;
-  border: 2px solid #3AAFA9;
+  background: #3aafa9;
+  border: 2px solid #3aafa9;
 }
 
 /* Team section
@@ -801,7 +842,7 @@ section {
 }
 
 #team .member .social a:hover {
-  color: #3AAFA9;
+  color: #3aafa9;
 }
 
 #team .member .social i {
@@ -811,31 +852,31 @@ section {
 
 /* Upload section
 --------------------------------*/
-p{
-  font-family: 'Work Sans', sans-serif;
+p {
+  font-family: "Work Sans", sans-serif;
   font-weight: 900;
 }
 
-input[type=file]::-webkit-file-upload-button {
+input[type="file"]::-webkit-file-upload-button {
   padding: 10px;
   background-color: lightgray;
-  transition: .1s;
+  transition: 0.1s;
   font-size: 20px;
 }
 
-input[type=file]::file-selector-button {
+input[type="file"]::file-selector-button {
   padding: 10px;
   background-color: lightgray;
-  transition: .1s;
+  transition: 0.1s;
   font-size: 20px;
 }
 
-input[type=file]::-webkit-file-upload-button:hover {
+input[type="file"]::-webkit-file-upload-button:hover {
   background-color: darkgrey;
   font-size: 20px;
 }
 
-input[type=file]::file-selector-button:hover {
+input[type="file"]::file-selector-button:hover {
   background-color: darkgrey;
   font-size: 20px;
 }

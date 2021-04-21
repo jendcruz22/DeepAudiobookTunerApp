@@ -35,6 +35,10 @@
   <!-- Template Main CSS File -->
   <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
 
+  <style>
+    audio:focus{outline: none;}
+  </style>
+
 </head>
 
 <body>
@@ -97,12 +101,21 @@
           <div class="box" style="height: 70%;">
               <div class="icon"><i class="bi bi-emoji-smile-fill"></i></div>
               <h4 class="title">Happy</h4>
-              <audio controls>
+              <audio controls controlsList="nodownload" id="happy-play">
                 <source src="{{ url_for('static', filename=clips[0]) }}" type="audio/mpeg">
               </audio>
               <center>
-                <a style="width: 60%; background-color: #3AAFA9; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;" href="{{ url_for('upload_file', _anchor='about') }}" class="btn-get-started">Retry</a>
-              </center>
+                <!-- <a style="width: 60%; background-color: #3AAFA9; border: none; 
+                color: white; padding: 15px 32px; text-align: center; text-decoration: none;
+                display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;" 
+                href="/regenerate_music/Happy" onclick="" class="btn-regenerate" value="Happy">Retry</a> -->
+                <form method="post" id="regenerate-music">
+                  <button id="happy" type="submit" style="width: 60%; background-color: #3AAFA9; border: none; 
+                  color: white; padding: 15px 32px; text-align: center; text-decoration: none;
+                  display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;" 
+                  class="btn-regenerate" value="Happy">Retry</button>
+                </form>
+              </center> 
           </div>
         </div>
 
@@ -115,7 +128,10 @@
               </audio>
               <br>
               <center>
-                <a style="width: 60%; background-color: #3AAFA9; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;" href="{{ url_for('upload_file', _anchor='about') }}" class="btn-get-started">Retry</a>
+                <a style="width: 60%; background-color: #3AAFA9; border: none;
+                color: white; padding: 15px 32px; text-align: center; text-decoration: none;
+                display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;" 
+                href="{{ url_for('upload_file', _anchor='about') }}" class="btn-get-started">Retry</a>
               </center>
           </div>
         </div>
@@ -129,7 +145,10 @@
               </audio>
               <br>
               <center>
-                <a style="width: 60%; background-color: #3AAFA9; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;" href="{{ url_for('upload_file', _anchor='about') }}" class="btn-get-started">Retry</a>
+                <a style="width: 60%; background-color: #3AAFA9; border: none;
+                color: white; padding: 15px 32px; text-align: center; text-decoration: none;
+                display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;"
+                href="{{ url_for('upload_file', _anchor='about') }}" class="btn-get-started">Retry</a>
               </center>
           </div>
         </div>
@@ -143,7 +162,10 @@
               </audio>
               <br>
               <center>
-                <a style="width: 60%; background-color: #3AAFA9; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;" href="{{ url_for('upload_file', _anchor='about') }}" class="btn-get-started">Retry</a>
+                <a style="width: 60%; background-color: #3AAFA9; border: none;
+                color: white; padding: 15px 32px; text-align: center; text-decoration: none;
+                display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;"
+                href="{{ url_for('upload_file', _anchor='about') }}" class="btn-get-started">Retry</a>
               </center>
           </div>
         </div>
@@ -190,6 +212,30 @@
   <!-- Template Main JS File -->
   <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
+  <!-- Jquery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js" 
+          integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+          crossorigin="anonymous"></script>
+
+  <!-- Regenerate function -->
+  <script>
+    $(document).on('submit','#regenerate-music',function(e)
+                  {
+      console.log('hello');
+      e.preventDefault();
+      $.ajax({
+        type:'POST',
+        url: "/regenerate_music/",
+        data:{
+          data: $("#happy").val()
+        },
+        success:function()
+        {
+          document.getElementById("happy-play").load();
+        }
+      })
+    });
+  </script>
 </body>
 
 </html>
