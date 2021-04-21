@@ -95,9 +95,9 @@
         <div class="col-lg-6 col-md-6" data-aos="zoom-in">
           <div class="box" style="height: 70%;">
               <div class="icon"><i class="bi bi-file-music"></i></div>
-              <h4 class="title">Harry Potter Chapter 1</h4>
-              <audio controls id="happy-play">
-                <source src="{{ url_for('static', filename='demo/demo (1)') }}" type="audio/mpeg">
+              <h4 class="title">Harry Potter and the Philosopher's Stone: Chapter 1</h4>
+              <audio controls controlsList="nodownload" id="happy-play">
+                <source src="{{ url_for('static', filename='demos/Chapter01_ TheBoyWhoLived-dat2.mp3') }}" type="audio/mpeg">
               </audio>
           </div>
         </div>
@@ -105,31 +105,9 @@
         <div class="col-lg-6 col-md-6" data-aos="zoom-in">
           <div class="box" style="height: 70%;">
               <div class="icon"><i class="bi bi-file-music"></i></div>
-              <h4 class="title">Alice in Wonderland Chapter 1</h4>
-              <audio controls id="sad-play">
-                <source src="{{ url_for('static', filename='demo/demo (2)') }}" type="audio/mpeg">
-              </audio>
-              <br>
-          </div>
-        </div>
-
-        <div class="col-lg-6 col-md-6" data-aos="zoom-in">
-          <div class="box" style="height: 70%;">
-              <div class="icon"><i class="bi bi-file-music"></i></div>
-              <h4 class="title">Tom Sawyer Chapter 1</h4>
-              <audio controls  id="angry-play">
-                <source src="{{ url_for('static', filename='demo/demo (1)') }}" type="audio/mpeg">
-              </audio>
-              <br>
-          </div>
-        </div>
-
-        <div class="col-lg-6 col-md-6" data-aos="zoom-in">
-          <div class="box" style="height: 70%;">
-              <div class="icon"><i class="bi bi-file-music"></i></div>
-              <h4 class="title">The Railway kids Chapter 1</h4>      
-              <audio controls id="neutral-play">
-                <source src="{{ url_for('static', filename='demo/demo (1)') }}" type="audio/mpeg">
+              <h4 class="title">Clever Maria</h4>
+              <audio controls controlsList="nodownload" id="sad-play">
+                <source src="{{ url_for('static', filename='demos/CleverMaria-dat.mp3') }}" type="audio/mpeg">
               </audio>
               <br>
           </div>
@@ -177,76 +155,6 @@
   <script src="https://code.jquery.com/jquery-3.5.1.js" 
           integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
           crossorigin="anonymous"></script>
-
-  <!-- Regenerate function -->
-  <script>
-    $(document).on('submit','#regenerate-happy',function(e)
-                  {
-      e.preventDefault();
-      $.ajax({
-        type:'POST',
-        url: "/regenerate_music/",
-        data:{
-          data: $("#happy").val()
-        },
-        success:function()
-        {
-          document.getElementById("happy-play").load();
-        }
-      })
-    });
-  </script>
-  <script>
-    $(document).on('submit','#regenerate-sad',function(e)
-                  {
-      e.preventDefault();
-      $.ajax({
-        type:'POST',
-        url: "/regenerate_music/",
-        data:{
-          data: $("#sad").val()
-        },
-        success:function()
-        {
-          document.getElementById("sad-play").load();
-        }
-      })
-    });
-  </script>
-  <script>
-    $(document).on('submit','#regenerate-angry',function(e)
-                  {
-      e.preventDefault();
-      $.ajax({
-        type:'POST',
-        url: "/regenerate_music/",
-        data:{
-          data: $("#angry").val()
-        },
-        success:function()
-        {
-          document.getElementById("angry-play").load();
-        }
-      })
-    });
-  </script>
-  <script>
-    $(document).on('submit','#regenerate-neutral',function(e)
-                  {
-      e.preventDefault();
-      $.ajax({
-        type:'POST',
-        url: "/regenerate_music/",
-        data:{
-          data: $("#neutral").val()
-        },
-        success:function()
-        {
-          document.getElementById("neutral-play").load();
-        }
-      })
-    });
-  </script>
 </body>
 
 </html>
