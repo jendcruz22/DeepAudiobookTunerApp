@@ -37,6 +37,8 @@
 
   <style>
     audio:focus{outline: none;}
+
+    
   </style>
 
 </head>
@@ -226,6 +228,8 @@
     $(document).on('submit','#regenerate-happy',function(e)
                   {
       e.preventDefault();
+      var button= document.getElementById('happy');
+      button.innerHTML = 'Loading..';
       $.ajax({
         type:'POST',
         url: "/regenerate_music/",
@@ -234,6 +238,8 @@
         },
         success:function()
         {
+          var button= document.getElementById('happy');
+          button.innerHTML = 'Retry';
           document.getElementById("happy-play").load();
         }
       })
@@ -243,6 +249,8 @@
     $(document).on('submit','#regenerate-sad',function(e)
                   {
       e.preventDefault();
+      var button= document.getElementById('sad');
+      button.innerHTML = 'Loading..';
       $.ajax({
         type:'POST',
         url: "/regenerate_music/",
@@ -251,6 +259,8 @@
         },
         success:function()
         {
+          var button= document.getElementById('sad');
+          button.innerHTML = 'Retry';
           document.getElementById("sad-play").load();
         }
       })
@@ -260,6 +270,8 @@
     $(document).on('submit','#regenerate-angry',function(e)
                   {
       e.preventDefault();
+      var button= document.getElementById('angry');
+      button.innerHTML = 'Loading..';
       $.ajax({
         type:'POST',
         url: "/regenerate_music/",
@@ -268,6 +280,8 @@
         },
         success:function()
         {
+          var button= document.getElementById('angry');
+          button.innerHTML = 'Retry';
           document.getElementById("angry-play").load();
         }
       })
@@ -277,6 +291,8 @@
     $(document).on('submit','#regenerate-neutral',function(e)
                   {
       e.preventDefault();
+      var button= document.getElementById('neutral');
+      button.innerHTML = 'Loading..';
       $.ajax({
         type:'POST',
         url: "/regenerate_music/",
@@ -285,6 +301,8 @@
         },
         success:function()
         {
+          var button= document.getElementById('neutral');
+          button.innerHTML = 'Retry';
           document.getElementById("neutral-play").load();
         }
       })
