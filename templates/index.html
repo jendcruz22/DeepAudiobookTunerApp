@@ -115,7 +115,8 @@
 
         <div class="section-header">
           <h3 class="section-title">How the System Works?</h3>
-          <p class="section-description" style="font-size: 18px; font-family: 'Work Sans', sans-serif; font-weight: 900; color: grey;">Following are the steps used in DAT's application</p>
+          <p class="section-description" style="font-size: 18px; font-family: 'Work Sans', sans-serif; font-weight: 900; 
+          color: grey;">Following are the steps used in DAT's application</p>
         </div>
 
         <div class="row">
@@ -124,7 +125,7 @@
             <div class="box">
               <div class="icon"><i class="bi bi-file-earmark-text"></i></div>
               <h4 class="title">Audio Segmentation</h4>
-              <!-- <p class="description">Insert info</p> -->
+              <p class="description">Using Python, we split the audio into segments of 30 seconds.</p>
             </div>
           </div>
 
@@ -132,7 +133,8 @@
             <div class="box">
               <div class="icon"><i class="bi bi-fonts"></i></div>
               <h4 class="title">Transcription</h4>
-              <!-- <p class="description">Insert info</p> -->
+              <p class="description">Transcription is the process of converting speech to text. We transcribe the audio 
+                segments produced in the previous step in order to provide an input to our hybrid Sentiment Analysis model.</p>
             </div>
           </div>
 
@@ -140,7 +142,10 @@
             <div class="box">
               <div class="icon"><i class="bi bi-emoji-smile"></i></div>
               <h4 class="title">Audio and Text based sentiment analysis</h4>
-              <!-- <p class="description">Insert info</p> -->
+              <p class="description">The segmented audio is provided as input to the Audio Based Sentiment Analysis model that uses a DNN to 
+                extract the audio features and scale them in order to create a list of predicted emotions.
+                The Text Based Sentiment Analysis uses the BERT model to generate a list of predicted emotions. 
+                The emotions predicted by both models are averaged out in order to generate a final list of emotions</p>
             </div>
           </div>
 
@@ -148,7 +153,8 @@
             <div class="box">
               <div class="icon"><i class="bi bi-music-note-list"></i></div>
               <h4 class="title">Music Generation for every sentiment considered</h4>
-              <!-- <p class="description">Insert info</p> -->
+              <p class="description">Using Transformer XL, our model generates unique musical scores for every emotion considered 
+                by the Deep Audiobook Tuner System.</p>
             </div>
           </div>
 
