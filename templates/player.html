@@ -105,11 +105,7 @@
                 <source src="{{ url_for('static', filename=clips[0]) }}" type="audio/mpeg">
               </audio>
               <center>
-                <!-- <a style="width: 60%; background-color: #3AAFA9; border: none; 
-                color: white; padding: 15px 32px; text-align: center; text-decoration: none;
-                display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;" 
-                href="/regenerate_music/Happy" onclick="" class="btn-regenerate" value="Happy">Retry</a> -->
-                <form method="post" id="regenerate-music">
+                <form method="post" id="regenerate-happy">
                   <button id="happy" type="submit" style="width: 60%; background-color: #3AAFA9; border: none; 
                   color: white; padding: 15px 32px; text-align: center; text-decoration: none;
                   display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;" 
@@ -123,15 +119,17 @@
           <div class="box" style="height: 70%;">
               <div class="icon"><i class="bi bi-emoji-frown-fill"></i></div>
               <h4 class="title">Sad</h4>
-              <audio controls>
+              <audio controls controlsList="nodownload" id="sad-play">
                 <source src="{{ url_for('static', filename=clips[1]) }}" type="audio/mpeg">
               </audio>
               <br>
               <center>
-                <a style="width: 60%; background-color: #3AAFA9; border: none;
-                color: white; padding: 15px 32px; text-align: center; text-decoration: none;
-                display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;" 
-                href="{{ url_for('upload_file', _anchor='about') }}" class="btn-get-started">Retry</a>
+                <form method="post" id="regenerate-sad">
+                  <button id="sad" type="submit" style="width: 60%; background-color: #3AAFA9; border: none; 
+                  color: white; padding: 15px 32px; text-align: center; text-decoration: none;
+                  display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;" 
+                  class="btn-regenerate" value="Sad">Retry</button>
+                </form>
               </center>
           </div>
         </div>
@@ -140,15 +138,17 @@
           <div class="box" style="height: 70%;">
               <div class="icon"><i class="bi bi-emoji-angry-fill"></i></div>
               <h4 class="title">Angry</h4>
-              <audio controls>
+              <audio controls  controlsList="nodownload" id="angry-play">
                 <source src="{{ url_for('static', filename=clips[2]) }}" type="audio/mpeg">
               </audio>
               <br>
               <center>
-                <a style="width: 60%; background-color: #3AAFA9; border: none;
-                color: white; padding: 15px 32px; text-align: center; text-decoration: none;
-                display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;"
-                href="{{ url_for('upload_file', _anchor='about') }}" class="btn-get-started">Retry</a>
+                <form method="post" id="regenerate-angry">
+                  <button id="angry" type="submit" style="width: 60%; background-color: #3AAFA9; border: none; 
+                  color: white; padding: 15px 32px; text-align: center; text-decoration: none;
+                  display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;" 
+                  class="btn-regenerate" value="Angry">Retry</button>
+                </form>
               </center>
           </div>
         </div>
@@ -157,15 +157,17 @@
           <div class="box" style="height: 70%;">
               <div class="icon"><i class="bi bi-emoji-neutral-fill"></i></div>
               <h4 class="title">Neutral</h4>      
-              <audio controls>
+              <audio controls controlsList="nodownload" id="neutral-play">
                 <source src="{{ url_for('static', filename=clips[3]) }}" type="audio/mpeg">
               </audio>
               <br>
               <center>
-                <a style="width: 60%; background-color: #3AAFA9; border: none;
-                color: white; padding: 15px 32px; text-align: center; text-decoration: none;
-                display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;"
-                href="{{ url_for('upload_file', _anchor='about') }}" class="btn-get-started">Retry</a>
+                <form method="post" id="regenerate-neutral">
+                  <button id="neutral" type="submit" style="width: 60%; background-color: #3AAFA9; border: none; 
+                  color: white; padding: 15px 32px; text-align: center; text-decoration: none;
+                  display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;" 
+                  class="btn-regenerate" value="Neutral">Retry</button>
+                </form>
               </center>
           </div>
         </div>
@@ -219,9 +221,8 @@
 
   <!-- Regenerate function -->
   <script>
-    $(document).on('submit','#regenerate-music',function(e)
+    $(document).on('submit','#regenerate-happy',function(e)
                   {
-      console.log('hello');
       e.preventDefault();
       $.ajax({
         type:'POST',
@@ -232,6 +233,57 @@
         success:function()
         {
           document.getElementById("happy-play").load();
+        }
+      })
+    });
+  </script>
+  <script>
+    $(document).on('submit','#regenerate-sad',function(e)
+                  {
+      e.preventDefault();
+      $.ajax({
+        type:'POST',
+        url: "/regenerate_music/",
+        data:{
+          data: $("#sad").val()
+        },
+        success:function()
+        {
+          document.getElementById("sad-play").load();
+        }
+      })
+    });
+  </script>
+  <script>
+    $(document).on('submit','#regenerate-angry',function(e)
+                  {
+      e.preventDefault();
+      $.ajax({
+        type:'POST',
+        url: "/regenerate_music/",
+        data:{
+          data: $("#angry").val()
+        },
+        success:function()
+        {
+          document.getElementById("angry-play").load();
+        }
+      })
+    });
+  </script>
+  <script>
+    $(document).on('submit','#regenerate-neutral',function(e)
+                  {
+      e.preventDefault();
+      $.ajax({
+        type:'POST',
+        url: "/regenerate_music/",
+        data:{
+          data: $("#neutral").val()
+        },
+        success:function()
+        {
+          document.getElementById("neutral-play").load();
         }
       })
     });
