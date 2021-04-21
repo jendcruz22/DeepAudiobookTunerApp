@@ -140,6 +140,10 @@ def download_file(filename):
 def return_files_tut(filename):
     file_path = DOWNLOAD_FOLDER + filename
     return send_file(file_path, as_attachment=True, attachment_filename='')
-    
+
+@app.route('/demo')
+def index():
+    return render_template('demo.html')
+
 if __name__ == "__main__":
     app.run(debug=True)
