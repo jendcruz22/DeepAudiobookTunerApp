@@ -72,16 +72,10 @@
 
       <div class="col-lg-6"></div>
         <p style="font-size: 20px; color: white;">
-          For every emotion considered by this system, a musical score is generated.
-          <br>
-          Click proceed if you are happy with all the tunes generated and 
-          <br>
-          would like to move on to the next step. Else, click the 
-          <br>
-          retry button next to the unsatisfactory audio file.
+          Check out what DAT has previously created!
         </p>
         <br>
-        <a href="#process" class="btn-get-started" style="font-size: 15px; font-weight: 500;">Noted. Now show me some tunes!</a>
+        <a href="#process" class="btn-get-started" style="font-size: 15px; font-weight: 500;">Show me</a>
       </div>
     </div>
   </section>
@@ -92,7 +86,7 @@
     <div class="container" data-aos="fade-up">
 
       <div class="section-header">
-        <h3 class="section-title" style="margin-bottom:100px;">Check out what DAT created</h3>
+        <h3 class="section-title" style="margin-bottom:100px;">DAT's previous work</h3>
         <!-- <p class="section-description"></p> -->
       </div>
 
@@ -101,18 +95,10 @@
         <div class="col-lg-6 col-md-6" data-aos="zoom-in">
           <div class="box" style="height: 70%;">
               <div class="icon"><i class="bi bi-emoji-smile-fill"></i></div>
-              <h4 class="title">Happy</h4>
-              <audio controls controlsList="nodownload" id="happy-play">
-                <source src="{{ url_for('static', filename=clips[0]) }}" type="audio/mpeg">
+              <h4 class="title">Alice in Wonderland</h4>
+              <audio controls id="happy-play">
+                <source src="{{ url_for('static', filename='demo/demo (1)') }}" type="audio/mpeg">
               </audio>
-              <center>
-                <form method="post" id="regenerate-happy">
-                  <button id="happy" type="submit" style="width: 60%; background-color: #3AAFA9; border: none; 
-                  color: white; padding: 15px 32px; text-align: center; text-decoration: none;
-                  display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;" 
-                  class="btn-regenerate" value="Happy">Retry</button>
-                </form>
-              </center> 
           </div>
         </div>
 
@@ -120,18 +106,10 @@
           <div class="box" style="height: 70%;">
               <div class="icon"><i class="bi bi-emoji-frown-fill"></i></div>
               <h4 class="title">Sad</h4>
-              <audio controls controlsList="nodownload" id="sad-play">
-                <source src="{{ url_for('static', filename=clips[1]) }}" type="audio/mpeg">
+              <audio controls id="sad-play">
+                <source src="{{ url_for('static', filename='demo/demo (2)') }}" type="audio/mpeg">
               </audio>
               <br>
-              <center>
-                <form method="post" id="regenerate-sad">
-                  <button id="sad" type="submit" style="width: 60%; background-color: #3AAFA9; border: none; 
-                  color: white; padding: 15px 32px; text-align: center; text-decoration: none;
-                  display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;" 
-                  class="btn-regenerate" value="Sad">Retry</button>
-                </form>
-              </center>
           </div>
         </div>
 
@@ -139,18 +117,10 @@
           <div class="box" style="height: 70%;">
               <div class="icon"><i class="bi bi-emoji-angry-fill"></i></div>
               <h4 class="title">Angry</h4>
-              <audio controls  controlsList="nodownload" id="angry-play">
-                <source src="{{ url_for('static', filename=clips[2]) }}" type="audio/mpeg">
+              <audio controls  id="angry-play">
+                <source src="{{ url_for('static', filename='demo/demo (1)') }}" type="audio/mpeg">
               </audio>
               <br>
-              <center>
-                <form method="post" id="regenerate-angry">
-                  <button id="angry" type="submit" style="width: 60%; background-color: #3AAFA9; border: none; 
-                  color: white; padding: 15px 32px; text-align: center; text-decoration: none;
-                  display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;" 
-                  class="btn-regenerate" value="Angry">Retry</button>
-                </form>
-              </center>
           </div>
         </div>
 
@@ -158,24 +128,12 @@
           <div class="box" style="height: 70%;">
               <div class="icon"><i class="bi bi-emoji-neutral-fill"></i></div>
               <h4 class="title">Neutral</h4>      
-              <audio controls controlsList="nodownload" id="neutral-play">
-                <source src="{{ url_for('static', filename=clips[3]) }}" type="audio/mpeg">
+              <audio controls id="neutral-play">
+                <source src="{{ url_for('static', filename='demo/demo (1)') }}" type="audio/mpeg">
               </audio>
               <br>
-              <center>
-                <form method="post" id="regenerate-neutral">
-                  <button id="neutral" type="submit" style="width: 60%; background-color: #3AAFA9; border: none; 
-                  color: white; padding: 15px 32px; text-align: center; text-decoration: none;
-                  display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;" 
-                  class="btn-regenerate" value="Neutral">Retry</button>
-                </form>
-              </center>
           </div>
         </div>
-        
-        <center>
-          <a style="width: 70%; background-color: #2B7A78; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;" href="/final_product/{{value}}" class="btn-get-started">Proceed</a>
-        </center>
 
       </div>
 
