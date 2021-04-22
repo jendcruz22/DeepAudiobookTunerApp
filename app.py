@@ -66,6 +66,7 @@ def upload_file():
 def preloader(filename):
     return render_template('preloader.html')
 
+# Processing API
 @app.route('/processing/', methods=['GET', 'POST'])
 def processing():
     if request.method == "POST":
@@ -103,7 +104,7 @@ def player():
     clips = session.get('clips')
     
     if request.method == 'POST':
-        return redirect('/final_product/')
+        return redirect('/final_preloader/')
 
     return render_template('player.html', data=clips)
 
@@ -125,16 +126,30 @@ def regenerate_music():
 
      return render_template('player.html', data=clips)
 
+# Final preloder API
+@app.route("/final_preloader/", methods = ['GET', 'POST'])
+def final_preloader():
+    return render_template('final_preloader.html')
+
+# Final processing API
+@app.route('/final_processing/', methods=['GET', 'POST'])
+def final_processing():
+    if request.method == "POST":
+        # Generate the final soundtrack and overlay it on the audiobook
+        dat.generateSoundtrack()
+        
+        full_path = dat.paths["final_audiobook_save_path"]
+        elements = full_path.split("\\")
+        dat_audiobook_path = "temp/" + "/".join(elements[len(elements) - 2 :]) + f"/{dat.file_name}-dat.mp3"
+
+        session['final_auidobook'] = dat_audiobook_path
+
+    return jsonify({'redirect': url_for("final_product")})
+
 # Final Audio API
 @app.route("/final_product/", methods = ['GET', 'POST'])
 def final_product():
-    # Generate the final soundtrack and overlay it on the audiobook
-    dat.generateSoundtrack()
-    
-    full_path = dat.paths["final_audiobook_save_path"]
-    elements = full_path.split("\\")
-    dat_audiobook_path = "temp/" + "/".join(elements[len(elements) - 2 :]) + f"/{dat.file_name}-dat.mp3"
-
+    dat_audiobook_path = session.get('final_auidobook')
     return render_template('final_product.html', dat_audiobook_path=dat_audiobook_path)
 
 # Download API
