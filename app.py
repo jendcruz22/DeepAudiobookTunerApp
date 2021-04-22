@@ -1,9 +1,9 @@
 import os
 from werkzeug.utils import secure_filename
 from flask import Flask, flash, request, redirect, send_file, render_template, url_for, session, jsonify
-
 import shutil
 import sys
+
 sys.path.append(os.path.abspath("../"))
 import tensorflow as tf
 from deepaudiobooktuner.deep_audiobook_tuner import *
@@ -153,14 +153,14 @@ def final_product():
     return render_template('final_product.html', dat_audiobook_path=dat_audiobook_path)
 
 # Download API
-@app.route("/downloadfile/<filename>", methods = ['GET', 'POST'])
-def download_file(filename):
-    return render_template('download.html', value=filename)
+# @app.route("/downloadfile/<filename>", methods = ['GET', 'POST'])
+# def download_file(filename):
+#     return render_template('download.html', value=filename)
 
-@app.route('/return-files/<filename>', methods = ['GET', 'POST'])
-def return_files_tut(filename):
-    file_path = DOWNLOAD_FOLDER + filename
-    return send_file(file_path, as_attachment=True, attachment_filename='')
+# @app.route('/return-files/<filename>', methods = ['GET', 'POST'])
+# def return_files_tut(filename):
+#     file_path = DOWNLOAD_FOLDER + filename
+#     return send_file(file_path, as_attachment=True, attachment_filename='')
 
 @app.route('/demo')
 def demo():
