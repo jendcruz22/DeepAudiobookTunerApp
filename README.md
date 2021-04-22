@@ -90,12 +90,12 @@ flask run
 ## **Validation**
 ### Text-Based Sentiment Analysis Validation:
 <p align="center">
-    <img src = "./static/img/TBSA-Validation.PNG" width="700" height="350">
+    <img src = "./static/img/TBSA-Validation.PNG" width="600" height="350">
 </p>
 
 ### Audio-Based Sentiment Analysis Validation:
 <p align="center">
-    <img src = "./static/img/ABSA-Validation.PNG" width="700" height="300">
+    <img src = "./static/img/ABSA-Validation.PNG" width="500" height="300">
 </p>
 
 ## **Analysis**
