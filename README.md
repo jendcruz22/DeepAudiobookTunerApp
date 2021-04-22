@@ -90,24 +90,24 @@ flask run
 
 ## **Validation**
 ### Text-Based Sentiment Analysis Validation:
-<p align="center" style="width: 10%;">
-    <img src = "./static/img/TBSA-Validation.PNG">
+<p align="center">
+    <img src = "./static/img/TBSA-Validation.PNG" style="width: 50%;">
 </p>
 
 ### Audio-Based Sentiment Analysis Validation:
-<p align="center" style="width: 10%;">
-    <img src = "./static/img/ABSA-Validation.PNG">
+<p align="center">
+    <img src = "./static/img/ABSA-Validation.PNG" style="width: 50%;">
 </p>
 
 ## **Analysis**
 ### Text-Based Sentiment Analysis Accuracy Metrics:
 <p align="center">
-    <img src = "./static/img/TBSA accuracy_metrics.png">
+    <img src = "./static/img/TBSA accuracy_metrics.png" style="width: 10%;">
 </p>
 
 ### Audio-Based Sentiment Analysis Accuracy Metrics:
 <p align="center">
-    <img src = "./static/img/ABSA accuracy_metrics.png">
+    <img src = "./static/img/ABSA accuracy_metrics.png" style="width: 10%;">
 </p>
 
 ---
