@@ -7,7 +7,9 @@ This application generates background music for audiobooks based on predicted se
 3. <a href="#Inst">Installation</a>
 4. <a href="#AppRun">How to run the application?</a>
 5. <a href="#AppRun">How it works?</a>
-6. <a href="#Collab">Collaborators</a>
+6. <a href="#Demo">Demonstration</a>
+7. <a href="#Collab">Collaborators</a>
+8. <a href="#References">References</a>
 
 ---
 
@@ -98,10 +100,9 @@ flask run
 * The [assets](https://github.com/jendcruz22/DeepAudiobookTunerApp/tree/master/assets) and [deepaudiobooktuner](https://github.com/jendcruz22/DeepAudiobookTunerApp/tree/master/deepaudiobooktuner) folders consist of the models used, the dependencies and other code that is used to run the application. 
 * The working of these models and other files related to it have been elaborated on in the following repository : [deep-audiobook-tuner](https://github.com/danlobo1999/deep-audiobook-tuner)
 
----
+## <a name="Demo">**6. Demonstration:**</a>
 
-
-## <a name="Collab">**6. Collaborators:**</a>
+## <a name="Collab">**7. Collaborators:**</a>
 
 
 *   [Daniel Lobo](https://github.com/danlobo1999)
@@ -109,4 +110,9 @@ flask run
 *   [Smita Deulkar](https://github.com/smita3199)
 *   [Leander Fernandes](https://github.com/fernandeslder)
 
+---
+
+
+## <a name="References">**8. References:**</a>
+[1] BERT Model : 
 
