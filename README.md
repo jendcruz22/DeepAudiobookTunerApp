@@ -98,23 +98,6 @@ flask run
 * The [assets](https://github.com/jendcruz22/DeepAudiobookTunerApp/tree/master/assets) and [deepaudiobooktuner](https://github.com/jendcruz22/DeepAudiobookTunerApp/tree/master/deepaudiobooktuner) folders consist of the models used, the dependencies and other code that is used to run the application. 
 * The working of these models and other files related to it have been elaborated on in the following repository : [deep-audiobook-tuner](https://github.com/danlobo1999/deep-audiobook-tuner)
 
-## **Validation**
-### Text-Based Sentiment Analysis Validation:
-<p align="center">
-    <img src = "./static/img/TBSA-Validation.PNG" width="600" height="350">
-</p>
-
-### Audio-Based Sentiment Analysis Validation:
-<p align="center">
-    <img src = "./static/img/ABSA-Validation.PNG" width="500" height="300">
-</p>
-
-## **Analysis**
-### Sentiment Analysis Accuracy Metrics:
-| Text-Based  | Audio-Based |
-| ------------- | ------------- |
-| <img src = "./static/img/TBSA accuracy_metrics.png" width="450" height="200">  | <img src = "./static/img/ABSA accuracy_metrics.png" width="450" height="200">  |
-
 ---
 
 
