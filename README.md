@@ -64,7 +64,40 @@ DeepAudiobookTunerApp
 ```
 
 ## <a name="Inst">**3. Installation**</a>
-Install the necessary requirements listed in [requirements.txt](https://github.com/jendcruz22/DeepAudiobookTunerApp/blob/master/requirements.txt) file using the following command :
+Before installing the requirements, create a python or conda environment. This is an important step as the tensorflow version being used by this system (2.4.1) works only on Python 3.7 and not any of the later versions.
+
+**1. Creating a Python environment:**
+
+Open your terminal and install the virtual environment tool with pip as follows :
+```
+pip install virtualenv
+```
+After the virtualenv has been installed, cd to the folder where you've saved this application from the terminal and run the following command to create a virtual environment :
+
+```
+cd path_to_folder
+virtualenv -p python3.7.10 env_name
+```
+
+Activate your environment : 
+```
+env_name\Scripts\activate
+```
+
+**2. Creating a conda environment :**
+
+Open your Anaconda prompt (You can also use miniconda). Create a conda environment using the following command :
+```
+conda create -n env_name python=3.7.10 anaconda
+```
+
+After successfully creating your environment, activate it by running :
+```
+conda activate env_name
+```
+
+
+Once you have created an environment using either one of the above methods, install the application's requirements :
 ```
 pip install -r requirements.txt
 ```
