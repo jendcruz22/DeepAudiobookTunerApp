@@ -6,7 +6,7 @@ This application generates background music for audiobooks based on predicted se
 2. <a href="#FS">Folder Structure</a>
 3. <a href="#Inst">Installation</a>
 4. <a href="#AppRun">How to run the application?</a>
-5. <a href="#AppRun">How it works?</a>
+5. <a href="#WW">How it works?</a>
 6. <a href="#Demo">Demonstration</a>
 7. <a href="#Collab">Collaborators</a>
 8. <a href="#References">References</a>
@@ -47,18 +47,9 @@ DeepAudiobookTunerApp
 │    ├── css
 │    ├── demos
 │    ├── img
-│    │   └── icons
 │    └── js
 │    └── temp
 │    └── vendor
-│        ├── aos
-│        ├── bootstrap-icons
-│        ├── bootstrap
-│        ├── boxicons
-│        ├── glightbox
-│        ├── isotope-layout
-│        ├── purecounter
-│        └── swiper
 └── templates
 └── uploads 
 ```
@@ -66,7 +57,7 @@ DeepAudiobookTunerApp
 ## <a name="Inst">**3. Installation**</a>
 Before installing the requirements, create a python or conda environment. This is an important step as the tensorflow version being used by this system (2.4.1) works only on Python 3.7 and not any of the later versions.
 
-**1. Creating a Python environment:**
+**3.1 Creating a Python environment:**
 
 Open your terminal and install the virtual environment tool with pip as follows :
 ```
@@ -84,7 +75,7 @@ Activate your environment :
 env_name\Scripts\activate
 ```
 
-**2. Creating a conda environment :**
+**3.2 Creating a conda environment :**
 
 Open your Anaconda prompt (You can also use miniconda). Create a conda environment using the following command :
 ```
@@ -112,7 +103,7 @@ or
 flask run
 ```
 
-## <a name="Works">**5. How it works?**</a>
+## <a name="WW">**5. What's what?**</a>
 
 * This application uses Flask, HTML, CSS, JavaScript, JQuery, and Ajax. 
 
