@@ -125,6 +125,7 @@ flask run
 * The working of these models and other files related to it have been elaborated on in the following repository : [deep-audiobook-tuner](https://github.com/danlobo1999/deep-audiobook-tuner)
 
 ## <a name="Demo">**6. Demonstration:**</a>
+[![Deep Audiobook Tuner System's Demonstration](static/img/DemoGIF.gif)](https://www.youtube.com/watch?v=--b-9HrKK6w)
 
 ## <a name="Collab">**7. Collaborators:**</a>
 
