@@ -57,7 +57,7 @@ DeepAudiobookTunerApp
 ## <a name="Inst">**3. Installation**</a>
 Before installing the requirements, create a python or conda environment. This is an important step as the tensorflow version being used by this system (2.4.1) works only on Python 3.7 and not any of the later versions.
 
-**3.1 Creating a Python environment:**
+### **3.1 Creating a Python environment:**
 
 Open your terminal and install the virtual environment tool with pip as follows :
 ```
@@ -75,7 +75,7 @@ Activate your environment :
 env_name\Scripts\activate
 ```
 
-**3.2 Creating a conda environment :**
+### **3.2 Creating a conda environment :**
 
 Open your Anaconda prompt (You can also use miniconda). Create a conda environment using the following command :
 ```
