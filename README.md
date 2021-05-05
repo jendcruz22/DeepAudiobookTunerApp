@@ -1,4 +1,5 @@
 # **Deep Audiobook Tuner (DAT)**
+This application generates background music for audiobooks based on predicted sentiments.
 
 ## **Table of Contents:**
 1. <a href="#About">About</a>
