@@ -6,7 +6,7 @@ This application generates background music for audiobooks based on predicted se
 2. <a href="#FS">Folder Structure</a>
 3. <a href="#Inst">Installation</a>
 4. <a href="#AppRun">How to run the application?</a>
-5. <a href="#WW">How it works?</a>
+5. <a href="#WW">What's what?</a>
 6. <a href="#Demo">Demonstration</a>
 7. <a href="#Collab">Collaborators</a>
 8. <a href="#References">References</a>
