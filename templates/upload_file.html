@@ -72,11 +72,11 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link" href="{{ url_for('index', _anchor='home') }}">Home</a></li>
-          <li><a class="nav-link scrollto" href="(url_for('index',_anchor='about'))">About</a></li>
-          <li><a class="nav-link scrollto" href="(url_for('index',_anchor='process'))">Process</a></li>
-          <li><a class="nav-link scrollto" href="{{ url_for('demo', _anchor='about') }}">Demo</a></li>
-          <li><a class="nav-link scrollto active" href="#">System</a></li>
-          <li><a class="nav-link scrollto" href="(url_for('index',_anchor='team'))">Team</a></li>
+          <li><a class="nav-link scrollto" href="{{url_for('index')}}">About</a></li>
+          <li><a class="nav-link scrollto" href="{{url_for('index',_anchor='process')}}">Process</a></li>
+          <li><a class="nav-link scrollto" href="{{ url_for('demo')}}">Demo</a></li>
+          <li><a class="nav-link scrollto active" href="#about">System</a></li>
+          <li><a class="nav-link scrollto" href="{{url_for('index',_anchor='team')}}">Team</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

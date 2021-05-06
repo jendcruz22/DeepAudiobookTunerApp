@@ -573,7 +573,7 @@ section {
 }
 
 #about .about-container .background {
-  min-height: 300px;
+  min-height: 500px;
   background: url("../img/HowTheSytemWorks.PNG") center top no-repeat;
   margin-bottom: 10px;
 }

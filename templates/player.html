@@ -43,6 +43,15 @@
 </head>
 
 <body>
+  <div id="preloader" class="animation">
+      <div class="decor">
+          <div class="bar"></div>
+      </div>
+      <p>Loading...</p>
+  </div>
+
+  <div class="pre-overlay o-1"></div>
+      <div class="pre-overlay o-2"></div>
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-right header-transparent">
@@ -51,11 +60,11 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link" href="{{ url_for('index', _anchor='home') }}">Home</a></li>
-          <li><a class="nav-link scrollto" href="(url_for('index',_anchor='about'))">About</a></li>
-          <li><a class="nav-link scrollto" href="(url_for('index',_anchor='process'))">Process</a></li>
+          <li><a class="nav-link scrollto" href="{{url_for('index',_anchor='about')}}">About</a></li>
+          <li><a class="nav-link scrollto" href="{{url_for('index')}}">Process</a></li>
           <li><a class="nav-link scrollto" href="{{ url_for('demo', _anchor='about') }}">Demo</a></li>
           <li><a class="nav-link scrollto active" href="#">System</a></li>
-          <li><a class="nav-link scrollto" href="(url_for('index',_anchor='team'))">Team</a></li>
+          <li><a class="nav-link scrollto" href="{{url_for('index',_anchor='team')}}">Team</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
