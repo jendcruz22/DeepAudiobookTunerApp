@@ -5,6 +5,13 @@ The working of the models used by this system and other files related to it have
 
 [deep-audiobook-tuner](https://github.com/danlobo1999/deep-audiobook-tuner)
 
+This project was made in collaboration with:
+
+- [Daniel Lobo](https://github.com/danlobo1999)
+- [Jenny Dcruz](https://github.com/jendcruz22)
+- [Smita Deulkar](https://github.com/smita3199)
+- [Leander Fernandes](https://github.com/fernandeslder)
+
 ## **Table of Contents:**
 1. <a href="#About">About</a>
 2. <a href="#FS">Folder Structure</a>
@@ -12,8 +19,7 @@ The working of the models used by this system and other files related to it have
 4. <a href="#AppRun">How to run the application?</a>
 5. <a href="#WW">What's what?</a>
 6. <a href="#Demo">Demonstration</a>
-7. <a href="#Collab">Collaborators</a>
-8. <a href="#References">References</a>
+7. <a href="#References">References</a>
 
 ---
 
@@ -132,17 +138,9 @@ flask run
 Click on the GIF to watch the demonstration video.
 [![Deep Audiobook Tuner System's Demonstration](static/img/DemoGIF.gif)](https://vimeo.com/545546819)
 
-## <a name="Collab">**7. Collaborators:**</a>
-
-
-*   [Daniel Lobo](https://github.com/danlobo1999)
-*   [Jenny Dcruz](https://github.com/jendcruz22)
-*   [Smita Deulkar](https://github.com/smita3199)
-*   [Leander Fernandes](https://github.com/fernandeslder)
-
 ---
 
 
-## <a name="References">**8. References:**</a>
+## <a name="References">**7. References:**</a>
 [1] BERT Model : 
 
