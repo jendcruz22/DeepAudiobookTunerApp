@@ -138,7 +138,7 @@ flask run
 Some examples of our system are available in the [demos directory](https://github.com/jendcruz22/DeepAudiobookTunerApp/tree/master/static/demos).
 
 Click on the GIF to watch the demonstration video.
-[![Deep Audiobook Tuner System's Demonstration](static/img/DemoGIF.gif)](https://vimeo.com/545546819)
+[![Deep Audiobook Tuner System's Demonstration](static/img/DemoGIF.gif)](https://youtu.be/4osmFTGa2Aw)
 
 ---
 
