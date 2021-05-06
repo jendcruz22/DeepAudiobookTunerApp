@@ -115,7 +115,7 @@ flask run
 
 * This flask application uses various templates that are created using HTML and are stored in the [templates](https://github.com/jendcruz22/DeepAudiobookTunerApp/tree/master/templates) folder.
 
-* The [CSS](https://github.com/jendcruz22/DeepAudiobookTunerApp/tree/master/static/css) and [JavaScript](https://github.com/jendcruz22/DeepAudiobookTunerApp/tree/master/static/js) files used by the HTML templates are stored in the [static](https://github.com/jendcruz22/DeepAudiobookTunerApp/tree/master/static) folder. This folder also consists of the images and [icons](https://github.com/jendcruz22/DeepAudiobookTunerApp/tree/master/static/img) that the application uses.
+* The [CSS](https://github.com/jendcruz22/DeepAudiobookTunerApp/tree/master/static/css) and [JavaScript](https://github.com/jendcruz22/DeepAudiobookTunerApp/tree/master/static/js) files used by the HTML templates are stored in the [static](https://github.com/jendcruz22/DeepAudiobookTunerApp/tree/master/static) folder. 
 
 * The main page ie the [index.html](https://github.com/jendcruz22/DeepAudiobookTunerApp/blob/master/templates/index.html) file consists of the basic details of this application: How it works, about the system, about the team, etc.
 
