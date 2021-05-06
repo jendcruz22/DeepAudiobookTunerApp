@@ -124,7 +124,7 @@ flask run
 * The [assets](https://github.com/jendcruz22/DeepAudiobookTunerApp/tree/master/assets) and [deepaudiobooktuner](https://github.com/jendcruz22/DeepAudiobookTunerApp/tree/master/deepaudiobooktuner) folders consist of the models used, the dependencies and other code that is used to run the application. 
 * The working of these models and other files related to it have been elaborated on in the following repository : [deep-audiobook-tuner](https://github.com/danlobo1999/deep-audiobook-tuner)
 
-## <a name="Demo">**6. Demonstration:**</a>
+## <a name="Demo">**6. Demonstration**</a>
 Click on the GIF to watch the demonstration video.
 [![Deep Audiobook Tuner System's Demonstration](static/img/DemoGIF.gif)](https://vimeo.com/545546819)
 
