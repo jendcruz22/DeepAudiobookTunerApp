@@ -1,7 +1,7 @@
 # **Deep Audiobook Tuner (DAT)**
 A system that generates an apt, emotionally pertinent, unique musical scores for an audiobook automatically based on the current narrative for the purpose of ameliorating user-experience while being accurate, cost-efficient, and time saving.
 
-The repository consisting of just this system's models, python notebooks, test files, etc can be found here : 
+The working of the models used by this system and other files related to it have been elaborated on in the following repository :
 
 [deep-audiobook-tuner](https://github.com/danlobo1999/deep-audiobook-tuner)
 
