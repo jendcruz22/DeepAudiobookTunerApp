@@ -35,7 +35,7 @@ The audio sentiment model is a fully connected Dense Neural Network with three h
 For music generation, we've implemented [bearpelican's](https://github.com/bearpelican/) approach. They created a music generation model using transformers and built using the [fastai library](https://github.com/fastai/fastai). We are using their MusicTransformer model  which uses [Transformer-XL](https://github.com/kimiyoung/transformer-xl) to take a sequence of music notes and predict the next note. A huge Thank you! to bearpelican and do check out their [project]([musicautobot](https://github.com/bearpelican/musicautobot)). 
 
 <p align="center">
-    <img src = "./static/img/HowTheSytemWorks.PNG">
+    <img src = "static/img/HowTheSytemWorks.PNG">
 </p>
 
 ## <a name="FS">**2. Folder Structure</a>**
