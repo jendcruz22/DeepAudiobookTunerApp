@@ -15,7 +15,7 @@ This project was made in collaboration with:
 ## **Table of Contents:**
 1. <a href="#About">About</a>
 2. <a href="#FS">Folder Structure</a>
-3. <a href="#Inst">Installation</a>
+3. <a href="#Inst">Installation & Setup</a>
 4. <a href="#AppRun">How to run the application?</a>
 5. <a href="#WW">What's what?</a>
 6. <a href="#Demo">Demonstration</a>
@@ -106,10 +106,9 @@ Once you have created an environment using either one of the above methods, inst
 pip install -r requirements.txt
 ```
 
-Additional requirements:
+**Additional requirements:**
 
 - Ffmpeg is available [here.](https://www.ffmpeg.org/download.html)
-- The package midi2audio requires a sound font which can be downloaded [here.](https://member.keymusician.com/Member/FluidR3_GM/index.html) The sound font should be place in **deep-audiobook-tuner/assets/music_generation_data/soundfont/** (Refer the <a href="#Structure">folder structure</a>)
 
 
 #### Transcription API key
@@ -119,12 +118,12 @@ The transcription process is done using a cloud service, specifically IBM's Wats
 
 #### Music generation model
 
-The music generation model trained by [bearpelican](https://github.com/bearpelican/musicautobot) is available at [here.](https://ashaw-midi-web-server.s3-us-west-2.amazonaws.com/pretrained/MusicTransformerKeyC.pth) This model is to be placed in **deep-audiobook-tuner/assets/music_generation_data/models/** (Refer the <a href="#Structure">folder structure</a>)
+The music generation model trained by [bearpelican](https://github.com/bearpelican/musicautobot) is available at [here.](https://ashaw-midi-web-server.s3-us-west-2.amazonaws.com/pretrained/MusicTransformerKeyC.pth) This model is to be placed in **DeepAudiobookTunerApp/assets/models/music_model/** (Refer the <a href="#FS">folder structure</a>)
 
 
 #### Text sentiment analysis model
 
-A pre-trained text sentiment analysis model is available [here.](https://drive.google.com/drive/folders/1rE-08BOk2R7O0oLoYnBusvFuJVVwUr1J?usp=sharing) This model is to be placed in **deep-audiobook-tuner/assets/text_sentiment_data/models/neubias_bert_model/** (Refer the <a href="#Structure">folder structure</a>)
+A pre-trained text sentiment analysis model is available [here.](https://drive.google.com/drive/folders/1rE-08BOk2R7O0oLoYnBusvFuJVVwUr1J?usp=sharing) This model is to be placed in **DeepAudiobookTunerApp/assets/models/text_sentiment_model/neubias_bert_model/** (Refer the <a href="#FS">folder structure</a>)
 
 ## <a name="AppRun">**4. How to run the application?**</a>
 Open your terminal, activate your python/conda environment and run the [app.py](https://github.com/jendcruz22/DeepAudiobookTunerApp/blob/master/app.py) file using the following command :
