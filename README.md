@@ -64,8 +64,12 @@ DeepAudiobookTunerApp
 └── uploads 
 ```
 
-## <a name="Inst">**3. Installation**</a>
-Clone the repository. Before installing the requirements, create a python or conda environment. This is an important step as the tensorflow version being used by this system (2.4.1) works only on Python 3.7 and not any of the later versions.
+## <a name="Inst">**3. Installation & Setup**</a>
+Clone the repository. 
+
+Install the requirements for [Tensorflow](https://www.tensorflow.org/install) before you run the following commands.
+
+Next, create a python or conda environment. This is an important step as the tensorflow version being used by this system (2.4.1) works only on Python 3.7 and not any of the later versions.
 
 ### **3.1 Creating a Python environment:**
 
@@ -97,11 +101,30 @@ After successfully creating your environment, activate it by running :
 conda activate env_name
 ```
 
-
 Once you have created an environment using either one of the above methods, install the application's requirements :
 ```
 pip install -r requirements.txt
 ```
+
+Additional requirements:
+
+- Ffmpeg is available [here.](https://www.ffmpeg.org/download.html)
+- The package midi2audio requires a sound font which can be downloaded [here.](https://member.keymusician.com/Member/FluidR3_GM/index.html) The sound font should be place in **deep-audiobook-tuner/assets/music_generation_data/soundfont/** (Refer the <a href="#Structure">folder structure</a>)
+
+
+#### Transcription API key
+
+The transcription process is done using a cloud service, specifically IBM's Watson Speech To Text. In order to use this service an API key is required. Create a free account and obtain your API key and URL. These values are to be saved in a file called .env as shown here `api_key = 'your_api_key' url = 'your_url'` . Keep this file in the root directory.
+
+
+#### Music generation model
+
+The music generation model trained by [bearpelican](https://github.com/bearpelican/musicautobot) is available at [here.](https://ashaw-midi-web-server.s3-us-west-2.amazonaws.com/pretrained/MusicTransformerKeyC.pth) This model is to be placed in **deep-audiobook-tuner/assets/music_generation_data/models/** (Refer the <a href="#Structure">folder structure</a>)
+
+
+#### Text sentiment analysis model
+
+A pre-trained text sentiment analysis model is available [here.](https://drive.google.com/drive/folders/1rE-08BOk2R7O0oLoYnBusvFuJVVwUr1J?usp=sharing) This model is to be placed in **deep-audiobook-tuner/assets/text_sentiment_data/models/neubias_bert_model/** (Refer the <a href="#Structure">folder structure</a>)
 
 ## <a name="AppRun">**4. How to run the application?**</a>
 Open your terminal, activate your python/conda environment and run the [app.py](https://github.com/jendcruz22/DeepAudiobookTunerApp/blob/master/app.py) file using the following command :
