@@ -30,7 +30,7 @@ To extract the sentiments from the audiobook, we use a hybrid sentiment analysis
 
 In order to perform text sentiment analysis, we require the transcripts of the audiobook. We are using IBM's [Watson Speech to Text](https://www.ibm.com/in-en/cloud/watson-speech-to-text) to transcribe the audiobooks.
 
-The audio sentiment model is a fully connected Dense Neural Network with three hidden layers. It takes in audio features as its input which are extracted from the audiobooks using [Librosa.](https://github.com/librosa/librosa)
+The audio sentiment model is a fully connected Dense Neural Network with four hidden layers. It takes in audio features as its input which are extracted from the audiobooks using [Librosa.](https://github.com/librosa/librosa)
 
 For music generation, we've implemented [bearpelican's](https://github.com/bearpelican/) approach. They created a music generation model using transformers and built using the [fastai library](https://github.com/fastai/fastai). We are using their MusicTransformer model  which uses [Transformer-XL](https://github.com/kimiyoung/transformer-xl) to take a sequence of music notes and predict the next note. A huge Thank you! to bearpelican and do check out their [project]([musicautobot](https://github.com/bearpelican/musicautobot)). 
 
