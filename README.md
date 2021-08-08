@@ -1,5 +1,5 @@
 # **Deep Audiobook Tuner (DAT)**
-A system that generates an apt, emotionally pertinent, unique background music for an audiobook automatically based on the current narrative for the purpose of ameliorating user-experience while being accurate, cost-efficient, and time saving.
+A system that generates an apt, emotionally pertinent, unique sequences of music for audiobooks based on the current narrative for the purpose of ameliorating user-experience while being accurate, cost-efficient, and time saving.
 
 The working of the models used by this system and other files related to it have been elaborated on in the following repository :
 
